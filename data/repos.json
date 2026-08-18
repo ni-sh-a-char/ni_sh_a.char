@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-18T05:59:09.265Z",
+ "generated_at": "2026-08-18T06:08:30.011Z",
  "org": "ni-sh-a-char",
  "repos": [
   {
@@ -7,7 +7,7 @@
    "description": "Website for the organization",
    "html_url": "https://github.com/ni-sh-a-char/ni_sh_a.char",
    "homepage": null,
-   "language": null,
+   "language": "CSS",
    "topics": [],
    "stars": 0,
    "forks": 0,
@@ -17,7 +17,7 @@
    "license": null,
    "size": 0,
    "created_at": "2026-08-18T05:24:38Z",
-   "pushed_at": "2026-08-18T05:24:39Z",
+   "pushed_at": "2026-08-18T06:08:12Z",
    "default_branch": "main"
   },
   {
