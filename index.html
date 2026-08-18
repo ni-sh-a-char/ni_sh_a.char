@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ni_sh_a.char — Transforming Computing</title>
+<meta name="description" content="ni_sh_a.char is an open-source organisation building compilers, kernels, developer tooling, AI assistants and Android apps in the open. Browse every public project, read what it does and why, and open an issue.">
+<meta name="theme-color" content="#06070a">
+<link rel="canonical" href="https://ni-sh-a-char.github.io/ni_sh_a.char/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ni_sh_a.char — Transforming Computing">
+<meta property="og:description" content="An open-source organisation building compilers, kernels, developer tooling, AI assistants and Android apps in the open.">
+<meta property="og:url" content="https://ni-sh-a-char.github.io/ni_sh_a.char/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/103268370?v=4">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/103268370?s=64&v=4">
+<link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/103268370?s=180&v=4">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.github.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ni_sh_a.char",
+  "alternateName": "ni-sh-a-char",
+  "url": "https://ni-sh-a-char.github.io/ni_sh_a.char/",
+  "logo": "https://avatars.githubusercontent.com/u/103268370?v=4",
+  "description": "Open-source organisation building compilers, kernels, developer tooling, AI assistants and Android apps.",
+  "email": "piyushmishra.professional@gmail.com",
+  "foundingDate": "2022-04-08",
+  "sameAs": ["https://github.com/ni-sh-a-char", "https://galiyaara-36629.web.app/"]
+}
+</script>
+</head>
+
+<body>
+<div class="backdrop" aria-hidden="true"></div>
+<a class="skip" href="#projects">Skip to projects</a>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">n_c</span>
+      <span>ni_sh_a<span class="brand__dot">.</span>char</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="#projects">Projects</a>
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#contribute">Contribute</a>
+      <a class="nav__link" href="#contact">Contact</a>
+      <button class="nav__k" id="open-palette" aria-label="Search projects">
+        <span>Search</span> <kbd>Ctrl K</kbd>
+      </button>
+      <a class="nav__link nav__link--cta btn btn--primary" href="https://github.com/ni-sh-a-char" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ── hero ─────────────────────────────────────────────── -->
+  <section class="wrap hero">
+    <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Open source since 2022</p>
+    <h1>Transforming <em>Computing</em>.</h1>
+    <p class="hero__lede">
+      ni_sh_a.char is an open-source organisation that builds the layers most people never
+      see — kernels and compilers, developer automation, AI assistants, security tooling
+      and Android apps. Every line of it is public, readable and open to contribution.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#projects">Explore the projects</a>
+      <a class="btn btn--ghost" href="https://github.com/ni-sh-a-char" target="_blank" rel="noopener">View on GitHub &nearr;</a>
+    </div>
+
+    <div class="stats" id="stats">
+      <div class="stat"><div class="stat__n" id="s-repos">—</div><div class="stat__l">Public projects</div></div>
+      <div class="stat"><div class="stat__n" id="s-stars">—</div><div class="stat__l">Stars earned</div></div>
+      <div class="stat"><div class="stat__n" id="s-langs">—</div><div class="stat__l">Languages</div></div>
+      <div class="stat"><div class="stat__n" id="s-live">—</div><div class="stat__l">Live demos</div></div>
+    </div>
+  </section>
+
+  <!-- ── projects ─────────────────────────────────────────── -->
+  <section class="wrap section" id="projects">
+    <div class="section__head">
+      <span class="section__tag">// The index</span>
+      <h2>Every public repository, always current.</h2>
+      <p class="section__sub">
+        This list is generated straight from the GitHub API and refreshes on a schedule —
+        anything the organisation publishes shows up here on its own. Open a project to read
+        an AI-written breakdown of what it is, why it exists and when you would reach for it.
+      </p>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar__row">
+        <div class="field">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+          </svg>
+          <input class="input" id="search" type="search" placeholder="Search projects, topics, languages…" aria-label="Search projects">
+        </div>
+        <select class="select" id="sort" aria-label="Sort projects">
+          <option value="pushed">Recently updated</option>
+          <option value="stars">Most starred</option>
+          <option value="created">Newest</option>
+          <option value="name">A – Z</option>
+        </select>
+        <span class="count" id="count"></span>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Filter by language"></div>
+    </div>
+
+    <div class="grid" id="grid">
+      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+    </div>
+  </section>
+
+  <!-- ── about ────────────────────────────────────────────── -->
+  <section class="wrap section" id="about">
+    <div class="section__head">
+      <span class="section__tag">// About</span>
+      <h2>Systems work, done in the open.</h2>
+      <p class="section__sub">
+        The organisation started in April 2022 as a place to put research code where other
+        people could actually use it. It has stayed that way: no private drops, no
+        marketing-first releases — the repository <em>is</em> the product.
+      </p>
+    </div>
+    <div class="cols">
+      <article class="tile">
+        <div class="tile__n">01</div>
+        <h3>Close to the metal</h3>
+        <p>Operating-system kernels, C internals, custom shells and an IDE built from the
+        ground up. The projects here exist to make the machine legible rather than to hide it.</p>
+      </article>
+      <article class="tile">
+        <div class="tile__n">02</div>
+        <h3>Tools that remove toil</h3>
+        <p>Automation for the parts of development nobody enjoys — environment bootstrapping,
+        containerised workflows, release pipelines and API scaffolding, packaged so they run
+        the same on any machine.</p>
+      </article>
+      <article class="tile">
+        <div class="tile__n">03</div>
+        <h3>Applied intelligence</h3>
+        <p>Virtual assistants, bioinformatics notebooks, computer-vision experiments and
+        autonomous agents — research code kept honest by being shipped, documented and
+        left open to inspection.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── contribute ───────────────────────────────────────── -->
+  <section class="wrap section" id="contribute">
+    <div class="section__head">
+      <span class="section__tag">// Contribute</span>
+      <h2>The best contribution is an issue.</h2>
+      <p class="section__sub">
+        Genuinely — before a pull request, before a fork, open an issue. A bug you hit, a
+        README that made no sense, a feature you wanted, a question that went unanswered:
+        all of it is useful, and none of it needs you to write a single line of code.
+        Issues are read, and they are answered.
+      </p>
+    </div>
+    <div class="cols">
+      <article class="tile">
+        <div class="tile__n">STEP 01</div>
+        <h3>Say what happened</h3>
+        <p>Open an issue on the repository in question. Describe what you expected, what you
+        got, and the version or commit you were on. Screenshots and stack traces are welcome.
+        <a href="https://github.com/ni-sh-a-char" target="_blank" rel="noopener">Pick a repository &nearr;</a></p>
+      </article>
+      <article class="tile">
+        <div class="tile__n">STEP 02</div>
+        <h3>Claim it, or don't</h3>
+        <p>If you want to fix it yourself, say so in the issue and it is yours. If you'd
+        rather just report and move on, that is a complete contribution — reporting a real
+        bug is worth more than a drive-by patch.</p>
+      </article>
+      <article class="tile">
+        <div class="tile__n">STEP 03</div>
+        <h3>Open the pull request</h3>
+        <p>Fork, branch, keep the diff focused on the issue, and link it in the description.
+        Small and reviewable beats large and complete. Questions mid-way belong in the issue
+        thread, not in your head.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── contact ──────────────────────────────────────────── -->
+  <section class="wrap section" id="contact">
+    <div class="section__head">
+      <span class="section__tag">// Contact</span>
+      <h2>Get in touch.</h2>
+    </div>
+    <div class="contact">
+      <div class="contact__card">
+        <h3>Something wrong with a project?</h3>
+        <p>Use the issue tracker. It's public, it's searchable, and it means the next person
+        with your problem finds the answer instead of asking again. This is the fastest route
+        to a fix.</p>
+        <a class="btn btn--primary" href="https://github.com/ni-sh-a-char" target="_blank" rel="noopener">Open an issue</a>
+      </div>
+      <div class="contact__card">
+        <h3>Anything else</h3>
+        <p>Collaboration, security disclosures, or a question that doesn't belong in a public
+        thread — email works. Please keep bug reports on GitHub so they stay findable.</p>
+        <a class="mail" href="mailto:piyushmishra.professional@gmail.com">piyushmishra.professional@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── footer ─────────────────────────────────────────────── -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__about">
+        <a class="brand" href="#top">
+          <span class="brand__mark" aria-hidden="true">n_c</span>
+          <span>ni_sh_a<span class="brand__dot">.</span>char</span>
+        </a>
+        <p>Transforming Computing. An open-source organisation on GitHub, building in public since April 2022.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contribute">Contribute</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://github.com/ni-sh-a-char" target="_blank" rel="noopener">GitHub organisation</a></li>
+          <li><a href="https://galiyaara-36629.web.app/" target="_blank" rel="noopener">galiyaara</a></li>
+          <li><a href="https://hub.docker.com/u/piyushmishradocker" target="_blank" rel="noopener">Docker Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:piyushmishra.professional@gmail.com">Email</a></li>
+          <li><a href="https://github.com/ni-sh-a-char" target="_blank" rel="noopener">Issue tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bar">
+      <span>&copy; <span id="year">2026</span> ni_sh_a.char</span>
+      <span id="freshness">Project data from the GitHub API</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── repo detail ────────────────────────────────────────── -->
+<dialog id="detail" aria-labelledby="detail-title">
+  <div class="sheet">
+    <div class="sheet__head">
+      <div class="sheet__title">
+        <h3 id="detail-title"></h3>
+        <p class="sheet__tagline" id="detail-tagline"></p>
+      </div>
+      <button class="x" id="detail-close" aria-label="Close">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+          <path d="M5 5l14 14M19 5L5 19"/>
+        </svg>
+      </button>
+    </div>
+    <div class="sheet__body" id="detail-body"></div>
+    <div class="sheet__foot" id="detail-foot"></div>
+  </div>
+</dialog>
+
+<!-- ── command palette ────────────────────────────────────── -->
+<dialog id="palette" aria-label="Search projects">
+  <div class="sheet">
+    <input class="palette__input" id="palette-input" type="text" placeholder="Type a project name…" autocomplete="off" spellcheck="false">
+    <div class="palette__list" id="palette-list" role="listbox" aria-label="Results"></div>
+  </div>
+</dialog>
+
+<script src="assets/app.js" type="module"></script>
+</body>
+</html>

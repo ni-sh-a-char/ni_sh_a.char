@@ -1,0 +1,48 @@
+name: Refresh site data
+
+# Rebuilds data/repos.json from the GitHub API and writes AI summaries for any
+# repository that changed since the last run. New repositories appear on the
+# site automatically — nothing here needs editing when one is added.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'      # daily, 04:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/**', '.github/workflows/refresh-data.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build repos.json and ai.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          # Any OpenAI-compatible endpoint works. Groq is the default; to switch to
+          # OpenRouter set repository variables AI_BASE_URL and AI_MODEL.
+          AI_BASE_URL: ${{ vars.AI_BASE_URL || 'https://api.groq.com/openai/v1' }}
+          AI_MODEL: ${{ vars.AI_MODEL || 'llama-3.3-70b-versatile' }}
+        run: node scripts/build-data.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/
+          git diff --staged --quiet || git commit -m 'chore: refresh repo data and AI summaries'
+          git push
