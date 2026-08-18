@@ -8,7 +8,13 @@ const EXCLUDE = [/^monsterrr-/i, /^\.github$/]
 const GH_TOKEN = process.env.GITHUB_TOKEN
 const AI_KEY = process.env.AI_API_KEY
 const AI_BASE = process.env.AI_BASE_URL || 'https://api.groq.com/openai/v1'
-const AI_MODEL = process.env.AI_MODEL || 'llama-3.3-70b-versatile'
+
+// Providers retire model names without warning, so pick one from the live
+// catalogue rather than hardcoding a string that goes stale. Set AI_MODEL to pin.
+const SKIP_MODEL = /whisper|tts|guard|embed|rerank|moderation|audio|transcribe/i
+const PREFER = [/llama-3\.3-70b/i, /gpt-oss-120b/i, /llama-3\.1-70b/i, /kimi-k2/i,
+                /qwen.*(32b|235b)/i, /llama-4/i, /70b/i, /instant/i]
+let MODEL = process.env.AI_MODEL || ''
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
@@ -62,9 +68,22 @@ Reply with JSON only, matching exactly this shape:
   "highlights": ["3-4 short factual bullets, max 80 chars each"]
 }`
 
+async function pickModel() {
+  if (MODEL) return MODEL
+  const res = await fetch(`${AI_BASE}/models`, { headers: { Authorization: `Bearer ${AI_KEY}` } })
+  if (!res.ok) throw new Error(`Cannot list models (${res.status}): ${await res.text()}`)
+  const ids = (await res.json()).data
+    .filter((m) => m.active !== false && !SKIP_MODEL.test(m.id))
+    .map((m) => m.id)
+  if (!ids.length) throw new Error('No usable chat models returned by the provider')
+  MODEL = PREFER.map((p) => ids.find((id) => p.test(id))).find(Boolean) || ids[0]
+  console.log(`model: ${MODEL}  (${ids.length} available)`)
+  return MODEL
+}
+
 async function summarise(repo, text) {
   const body = {
-    model: AI_MODEL,
+    model: MODEL,
     temperature: 0.4,
     max_tokens: 900,
     response_format: { type: 'json_object' },
@@ -139,22 +158,30 @@ const ai = await load('data/ai.json', {})
 if (!AI_KEY) {
   console.log('AI_API_KEY not set - keeping existing summaries')
 } else {
+  await pickModel()
   let done = 0
+  let failed = 0
   for (const repo of repos) {
-    const sig = `${repo.pushed_at}|${repo.description || ''}|${AI_MODEL}`
+    const sig = `${repo.pushed_at}|${repo.description || ''}|${MODEL}`
     if (ai[repo.name]?.sig === sig) continue
     try {
       const text = await readme(repo.name)
       const summary = await summarise(repo, text)
-      ai[repo.name] = { sig, ...summary, model: AI_MODEL, at: new Date().toISOString() }
+      ai[repo.name] = { sig, ...summary, model: MODEL, at: new Date().toISOString() }
       console.log(`  wrote ${repo.name}`)
       if (++done % 10 === 0) await writeFile('data/ai.json', JSON.stringify(ai, null, 1))
       await sleep(1500)
     } catch (err) {
+      failed++
       console.error(`  FAILED ${repo.name}: ${err.message}`)
     }
   }
-  console.log(`${done} summaries regenerated`)
+  console.log(`${done} summaries regenerated, ${failed} failed`)
+  // A run where nothing succeeded is a broken run, not a quiet one.
+  if (failed && !done) {
+    await writeFile('data/ai.json', JSON.stringify(ai, null, 1))
+    throw new Error(`every summary failed (${failed}) — check the model name and API key`)
+  }
 }
 
 // prune summaries for repos that no longer exist

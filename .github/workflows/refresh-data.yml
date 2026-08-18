@@ -34,9 +34,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           # Any OpenAI-compatible endpoint works. Groq is the default; to switch to
-          # OpenRouter set repository variables AI_BASE_URL and AI_MODEL.
+          # OpenRouter set the AI_BASE_URL repository variable.
+          # AI_MODEL is optional — left empty the script picks the best model the
+          # provider currently offers, so a retired model name cannot break the build.
           AI_BASE_URL: ${{ vars.AI_BASE_URL || 'https://api.groq.com/openai/v1' }}
-          AI_MODEL: ${{ vars.AI_MODEL || 'llama-3.3-70b-versatile' }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
         run: node scripts/build-data.mjs
 
       - name: Commit if changed
