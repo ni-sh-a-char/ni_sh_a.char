@@ -1,26 +1,26 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-08-18T06:39:01Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static AI‑enhanced org site on GitHub Pages",
-  "what": "A public website hosted on GitHub Pages that lists every public repository in the ni_sh_a.char organisation. It displays AI‑generated summaries for each repo, using only static HTML, CSS and JavaScript. Data is refreshed daily by a GitHub Actions workflow that calls a free LLM.",
-  "why": "Maintaining an up‑to‑date catalogue of an organisation’s projects is tedious; this site automates the process and provides readable explanations for visitors and contributors. It’s aimed at anyone wanting a quick overview of the org’s work without digging through GitHub manually.",
-  "when": "Use it when you need to explore the organisation’s repositories or understand a project’s purpose at a glance. The site is production‑ready, with daily data refreshes and offline fallback to the last snapshot.",
+  "sig": "2026-08-18T06:47:39Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static org site that auto‑lists repos with AI‑generated summaries",
+  "what": "A GitHub‑Pages‑hosted static website that enumerates every public repository in the ni_sh_a.char organization. It renders a JSON snapshot of repos and enriches each entry with an AI‑written breakdown of what it does, why it exists, and when to use it. The site is built with plain HTML, CSS and JavaScript, without any framework or build step.",
+  "why": "Maintaining an up‑to‑date catalog of an organization’s projects is tedious and error‑prone. This site automates the listing and provides concise, AI‑generated summaries, making it easier for newcomers, contributors, and stakeholders to discover and understand the codebase. It’s aimed at anyone needing a quick overview of the org’s public work.",
+  "when": "Use it when you need an at‑glance view of all public repos without digging through GitHub manually. The site is production‑ready, refreshed daily by a GitHub Action that regenerates data and calls a free LLM for changed repositories. It works offline with the last cached snapshot if the API is rate‑limited.",
   "stack": [
+   "JavaScript",
    "HTML",
    "CSS",
-   "JavaScript",
    "GitHub Pages",
    "GitHub Actions",
-   "LLM integration"
+   "LLM"
   ],
   "highlights": [
-   "Lists every public repo with AI‑written description",
-   "Fully static, served directly from GitHub Pages",
-   "Daily GitHub Action regenerates data via a free LLM",
-   "Falls back to cached JSON if API call fails or offline"
+   "Pure static assets – no framework or bundler",
+   "Daily GitHub Action regenerates repo data",
+   "AI‑written summaries for each repository",
+   "Falls back to cached data when offline or rate‑limited"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-18T06:39:15.810Z"
+  "at": "2026-08-18T06:47:53.077Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -971,5 +971,116 @@
   ],
   "model": "openai/gpt-oss-120b",
   "at": "2026-08-18T06:46:33.203Z"
+ },
+ "Scanner": {
+  "sig": "2025-12-25T07:55:28Z|A simple bar code and QR code scanner using google ML Kit.|openai/gpt-oss-120b",
+  "tagline": "Simple Android barcode and QR code scanner powered by Google ML Kit",
+  "what": "Scanner is an Android app written in Java that uses the device camera to read barcodes and QR codes. It leverages Google ML Kit’s barcode scanning API to decode the data and shows the result on screen.",
+  "why": "It helps developers or hobbyists who need a quick way to integrate barcode scanning into Android projects without building their own vision pipeline. The app is useful for testing, demos, or as a reference implementation.",
+  "when": "Use it when you need a ready‑made, lightweight scanner for Android devices. The codebase was last updated in December 2025 and builds with Android Studio, indicating a maintained state.",
+  "stack": [
+   "Java",
+   "Android",
+   "Google ML Kit",
+   "Camera API"
+  ],
+  "highlights": [
+   "Scans barcodes and QR codes in real time",
+   "Uses Google ML Kit for fast, on‑device recognition",
+   "Minimal UI focused on scanning and result display",
+   "Simple setup: import into Android Studio and run"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:47:56.513Z"
+ },
+ "ETERNITY---Virtual-Assistant": {
+  "sig": "2025-12-25T07:42:44Z|A Virtual Assistant to automate many tasks|openai/gpt-oss-120b",
+  "tagline": "Python voice‑driven virtual assistant for everyday tasks",
+  "what": "ETERNITY is a Python application that listens to spoken commands and carries out a range of desktop actions such as checking the time, searching the web, playing music, creating notes, and more. It includes an optional E.T.E.R.GPT module that adds ChatGPT‑style responses when an OpenAI API key is provided.",
+  "why": "It aims to automate repetitive or hands‑free tasks for users who prefer speaking to typing, and serves as a starter project for developers exploring voice‑controlled automation. The assistant consolidates common utilities behind a single voice interface.",
+  "when": "Reach for ETERNITY when you need quick voice‑controlled shortcuts on a PC or when prototyping a voice assistant. The repository is actively maintained (last push Dec 2025) but requires manual setup of dependencies and an OpenAI key for the chat feature.",
+  "stack": [
+   "Python",
+   "SpeechRecognition",
+   "PyAudio",
+   "OpenAI API",
+   "Desktop Automation",
+   "Voice Commands"
+  ],
+  "highlights": [
+   "Voice commands for time, web search, music, email, etc.",
+   "Uses PyAudio for microphone input on Windows/Linux",
+   "Optional ChatGPT integration via E.T.E.R.GPT",
+   "Installable via pip and pipwin, but needs manual OpenAI key"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:48:29.826Z"
+ },
+ "Bio.Informatica": {
+  "sig": "2025-12-25T07:33:24Z|A Common Platform for the study related to Bioinformatics, Computational Biology and Computational Chemistry.|openai/gpt-oss-120b",
+  "tagline": "Unified Jupyter platform for bioinformatics and computational chemistry",
+  "what": "Bio.Informatica is a collection of Jupyter notebooks that bundle tools for bioinformatics, computational biology, and computational chemistry. It offers interactive activities such as DNA sequence analysis, bioactivity prediction, dot‑plot generation, solubility prediction, and molecular descriptor calculation. The notebooks can be run locally with Python/Java or via a provided Docker image.",
+  "why": "Researchers, educators, and students often need a ready‑made environment that combines common bio‑informatics and cheminformatics analyses. Bio.Informatica consolidates these utilities, reducing setup time and dependency management for anyone doing early‑stage research or teaching in these fields.",
+  "when": "Reach for Bio.Informatica when you need quick, reproducible analyses of sequences or small‑molecule properties without building pipelines from scratch. The project is actively maintained as of late 2025 and offers a Docker image for one‑click deployment.",
+  "stack": [
+   "python",
+   "java",
+   "jupyter-notebook",
+   "docker",
+   "bioinformatics",
+   "computational-chemistry"
+  ],
+  "highlights": [
+   "Interactive notebooks for DNA sequence analysis",
+   "Bioactivity and solubility prediction tools",
+   "Molecular descriptor calculator for small molecules",
+   "Docker image for one‑click environment setup"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:48:37.466Z"
+ },
+ "YouTube-Video-Automation-System": {
+  "sig": "2025-12-11T12:22:37Z|A fully automated YouTube video generation and upload system that creates viral coding/tech videos using real-time web sources, AI optimization, and professional video composition.|openai/gpt-oss-120b",
+  "tagline": "Automated AI‑driven system to create and upload tech videos to YouTube",
+  "what": "YouTube‑Video‑Automation‑System is a Python application that pulls trending tech topics from six public APIs, generates 11‑scene scripts with the Groq LLM, creates visuals with Stable Diffusion XL, adds voice‑overs via Kokoro TTS and subtitles with Whisper, and assembles the final video using MoviePy. The resulting video is then uploaded to YouTube through OAuth‑2.0 with optional scheduling.",
+  "why": "Creating daily, high‑engagement tech videos manually is labor‑intensive and requires coordination of research, scripting, editing, and publishing. This project automates the entire pipeline, targeting solo creators or small channels that want consistent content without the overhead of manual production.",
+  "when": "Use it when you need a hands‑free way to generate and publish tech videos on a daily or batch schedule. The repository is a recent prototype (first commit Dec 2025) and expects valid API keys for Groq, Google OAuth, Stable Diffusion, TTS, and Whisper. It runs on Python 3.10+ and is ready for experimentation, not yet a production‑grade service.",
+  "stack": [
+   "Python",
+   "MoviePy",
+   "Groq API",
+   "Stable Diffusion XL",
+   "Google YouTube API",
+   "OpenAI Whisper"
+  ],
+  "highlights": [
+   "Fetches trending topics from 6 free web APIs",
+   "Generates 11‑scene scripts and viral titles with Groq LLM",
+   "Builds videos with images, TTS voice, and subtitles via MoviePy",
+   "Uploads and schedules videos on YouTube using OAuth 2.0"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:49:13.012Z"
+ },
+ "curious_shots_": {
+  "sig": "2022-07-14T20:23:09Z|An Image Editing App.|openai/gpt-oss-120b",
+  "tagline": "A lightweight Java app to learn basic image editing",
+  "what": "curious_shots_ is a simple Java desktop application that lets users load, edit, and save images. It is written as an educational example to demonstrate core image‑processing techniques in Java.",
+  "why": "It targets beginners who want hands‑on experience with image manipulation without the overhead of large libraries. The project serves as a teaching aid for Java GUI and graphics programming.",
+  "when": "Use it when you need a minimal reference implementation for learning or prototyping simple edits. The code was last updated in July 2022 and is essentially in a stable, static state.",
+  "stack": [
+   "Java",
+   "Swing",
+   "ImageIO",
+   "Desktop"
+  ],
+  "highlights": [
+   "Educational example of Java image processing",
+   "Simple UI for loading and saving images",
+   "Self‑contained source with no external dependencies",
+   "Runs on any platform with a Java runtime"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:49:40.520Z"
  }
 }
