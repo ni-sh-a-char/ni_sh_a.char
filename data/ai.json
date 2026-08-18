@@ -1,1 +1,975 @@
-{}
+{
+ "ni_sh_a.char": {
+  "sig": "2026-08-18T06:39:01Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static AI‑enhanced org site on GitHub Pages",
+  "what": "A public website hosted on GitHub Pages that lists every public repository in the ni_sh_a.char organisation. It displays AI‑generated summaries for each repo, using only static HTML, CSS and JavaScript. Data is refreshed daily by a GitHub Actions workflow that calls a free LLM.",
+  "why": "Maintaining an up‑to‑date catalogue of an organisation’s projects is tedious; this site automates the process and provides readable explanations for visitors and contributors. It’s aimed at anyone wanting a quick overview of the org’s work without digging through GitHub manually.",
+  "when": "Use it when you need to explore the organisation’s repositories or understand a project’s purpose at a glance. The site is production‑ready, with daily data refreshes and offline fallback to the last snapshot.",
+  "stack": [
+   "HTML",
+   "CSS",
+   "JavaScript",
+   "GitHub Pages",
+   "GitHub Actions",
+   "LLM integration"
+  ],
+  "highlights": [
+   "Lists every public repo with AI‑written description",
+   "Fully static, served directly from GitHub Pages",
+   "Daily GitHub Action regenerates data via a free LLM",
+   "Falls back to cached JSON if API call fails or offline"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:39:15.810Z"
+ },
+ "WebWeaveX": {
+  "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
+  "tagline": "Deterministic cross‑language runtime cognition for humans and AI agents",
+  "what": "WebWeaveX is a deterministic runtime cognition infrastructure that captures live software behavior—DOM events, state machines, and network traffic—as a canonical graph model. It provides native SDKs that generate identical SHA‑256 hashes for the same input across Python, JavaScript/TypeScript, Dart, Java, and Kotlin. The system enables replay, reconstruction, and authenticated session continuation of operational software environments.",
+  "why": "Traditional scrapers and browser‑automation tools are brittle and cannot guarantee reproducible state. WebWeaveX solves this by offering a bit‑for‑bit deterministic representation that can be consumed by both human engineers and autonomous AI agents for auditing, debugging, and automated reasoning. It targets teams building AI‑augmented tooling, security auditors, and developers needing reliable replay of complex web or app sessions.",
+  "when": "Reach for WebWeaveX when you need a reproducible, language‑agnostic view of a running web or app instance—e.g., for AI‑driven analysis, compliance checks, or deterministic testing. The project is actively maintained, with the latest SDK version 3.0.0 released and recent commits as of August 2026. Documentation and architecture diagrams are available on the official site.",
+  "stack": [
+   "python",
+   "javascript",
+   "dart",
+   "deterministic",
+   "ai-agents"
+  ],
+  "highlights": [
+   "Bit‑for‑bit identical SHA‑256 hashes across all SDKs",
+   "Native SDKs for Python, JS/TS, Dart, Java, Kotlin (v3.0.0)",
+   "Captures live DOM events, network traffic, and state machines",
+   "Authenticated session continuation with deterministic replay"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:39:19.605Z"
+ },
+ "Metacrafters": {
+  "sig": "2025-12-25T08:08:25Z|A simple token creating contract|openai/gpt-oss-120b",
+  "tagline": "Simple Solidity contract for creating and managing a custom token",
+  "what": "Flash is a minimal Solidity contract that defines a token named Flash (FLSH). It tracks total supply and per‑address balances, and provides explicit mint and burn functions. The contract is intended for educational or prototype use.",
+  "why": "It offers a straightforward example of token issuance without the complexity of full ERC‑20 standards, useful for learners and quick prototypes. Developers needing a bare‑bones token model can use it as a starting point.",
+  "when": "Reach for this contract when you need a simple token for testing or teaching Solidity basics. The code is stable, compiled with Solidity 0.8.18, and hosted as a fork with recent activity as of Dec 2025.",
+  "stack": [
+   "Solidity",
+   "Ethereum",
+   "Smart Contracts",
+   "Remix",
+   "MIT License"
+  ],
+  "highlights": [
+   "Mint function adds tokens to any address and updates totalSupply",
+   "Burn function safely reduces supply only if balance is sufficient",
+   "Public variables expose token name, abbreviation, and total supply",
+   "Designed for easy compilation in Remix with Solidity 0.8.18"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:39:23.293Z"
+ },
+ "cryptobooks": {
+  "sig": "2025-12-25T08:07:36Z|Final Year Project|openai/gpt-oss-120b",
+  "tagline": "A student final‑year project repository named cryptobooks",
+  "what": "cryptobooks is a repository for a university final‑year project. It contains the source code and related files created for the project, though details are sparse. The project appears to be a fork of another codebase.",
+  "why": "It serves as an academic example for students and educators looking at project structures and code organization in a final‑year context. The repository is useful for anyone studying how student projects are packaged and shared.",
+  "when": "You might explore it when reviewing example student projects or researching educational code samples. The repository was last updated in December 2025 and remains in a prototype or incomplete state.",
+  "stack": [
+   "Education",
+   "Prototype",
+   "StudentProject",
+   "Fork"
+  ],
+  "highlights": [
+   "Fork of an original repository",
+   "Last updated Dec 2025",
+   "Contains a final‑year project named cryptobooks",
+   "Minimal documentation"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:39:26.235Z"
+ },
+ "Blogs": {
+  "sig": "2025-12-25T07:58:05Z|A Blog app build using the MERN stack. The app consists of a login page and user can create and maintain their blogs.|openai/gpt-oss-120b",
+  "tagline": "Full‑stack MERN blog with JWT auth and Docker support",
+  "what": "Blogs is a JavaScript application built on the MERN stack that lets users register, log in, and create, edit, or delete their own blog posts via a React frontend and Express API. The UI uses Tailwind CSS for responsive design and the backend stores data in MongoDB.",
+  "why": "It provides a ready‑to‑run example of a modern full‑stack web app, useful for developers learning MERN, authentication, or containerised deployment. Ideal for hobbyists or educators needing a simple, extensible blogging platform.",
+  "when": "Use it when you need a starter blog project or a reference implementation for JWT‑protected CRUD APIs. The repository includes Docker Compose, hot‑reload scripts, and is actively maintained as of the last push in Dec 2025.",
+  "stack": [
+   "MERN",
+   "JWT",
+   "Tailwind CSS",
+   "Docker",
+   "REST API",
+   "MongoDB"
+  ],
+  "highlights": [
+   "JWT‑based registration and login with protected routes",
+   "Full CRUD for blog posts, author‑only edit/delete",
+   "Responsive React UI styled with Tailwind CSS",
+   "Docker Compose sets up MongoDB and the app in one command"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:39:46.017Z"
+ },
+ "Dockeroid": {
+  "sig": "2025-12-25T07:57:24Z|Web based solution for Android application emulation and testing. Dockeroid where web and android meets together.|openai/gpt-oss-120b",
+  "tagline": "Web UI for Docker‑based Android app emulation",
+  "what": "Dockeroid is a Python web application packaged as a Docker image. The image runs Ubuntu with the Android SDK, ADB, QEMU‑KVM and a pre‑configured Android Virtual Device. Through the web UI you can upload an APK and view the app running inside the emulator.",
+  "why": "It solves the need to test Android applications without flashing physical devices or enabling unknown‑source installs. The isolated Docker environment provides reproducible, sandboxed testing for developers and QA engineers.",
+  "when": "Reach for Dockeroid when you need a quick, repeatable way to run an APK on a virtual Android device, especially in CI pipelines or local dev setups. The project is actively maintained (last push Dec 2025) and ready to run on hosts with KVM support.",
+  "stack": [
+   "python",
+   "docker",
+   "android-sdk",
+   "kvm",
+   "web",
+   "ubuntu"
+  ],
+  "highlights": [
+   "Docker image bundles Ubuntu, Android SDK, ADB, QEMU‑KVM",
+   "Web UI lets you upload APK and launch it in an emulator",
+   "Automatic SDK license acceptance and AVD creation",
+   "Requires host KVM; container defaults to a Bash shell"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:39:58.222Z"
+ },
+ "Dev-Automation-Script": {
+  "sig": "2025-12-25T07:56:21Z|A script for every developer build to automate work with Git and Docker. A successor to Git-Automation-Script.|openai/gpt-oss-120b",
+  "tagline": "Menu‑driven script to automate Git and Docker tasks per project",
+  "what": "Dev‑Automation‑Script is a small utility that lives in a project’s working directory and provides a menu‑driven interface to run common Git and Docker commands. It is invoked via the provided dash.sh shell script after a one‑time configuration step. The script is written in Python/Bash and expects write access to operate on the repository.",
+  "why": "Developers often repeat the same Git and Docker workflows across many projects, leading to boiler‑plate commands and configuration drift. This tool centralises those operations behind a simple menu, reducing manual typing and the chance of errors. It targets developers who work in terminal environments and need a quick, repeatable way to manage code and containers.",
+  "when": "Reach for this script when you start a new repository or need a consistent way to handle Git commits, pushes, and Docker builds without remembering exact flags. The repository shows recent activity (last push Dec 2025) indicating it is still maintained. It is especially handy in WSL or Linux shells where the dash.sh file can be executed directly.",
+  "stack": [
+   "Python",
+   "Bash",
+   "Git",
+   "Docker",
+   "CLI",
+   "Automation"
+  ],
+  "highlights": [
+   "One‑time configuration then reuse across projects",
+   "Interactive menu for common git commands",
+   "Integrated Docker shortcuts (build, run, push)",
+   "Works in WSL for Windows developers"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:40:06.677Z"
+ },
+ "RESENTMENT---kernel": {
+  "sig": "2025-12-25T07:54:23Z||openai/gpt-oss-120b",
+  "tagline": "A minimal kernel that prints a message during boot",
+  "what": "RESENTMENT‑KERNEL is a shell‑based project that builds a simple kernel image which outputs a custom message when the system boots. It ships a Docker image that contains the build environment and required tools.",
+  "why": "It serves as a teaching aid for developers who want to see how kernel boot messages work without setting up a full toolchain. It’s useful for hobbyists experimenting with low‑level boot sequences.",
+  "when": "Use it when you need a quick, reproducible kernel build to demonstrate boot‑time output, or when learning kernel compilation in a containerized setup. The repository has been maintained up to late 2025 but remains a minimal example rather than a production kernel.",
+  "stack": [
+   "Shell",
+   "Docker",
+   "Linux kernel",
+   "Build environment",
+   "Bash"
+  ],
+  "highlights": [
+   "Prints a custom message at boot",
+   "Docker image provides ready‑to‑use build env",
+   "Simple shell scripts for compilation",
+   "Minimal example for learning"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:40:24.732Z"
+ },
+ "RESENTMENT": {
+  "sig": "2025-12-25T07:53:33Z||openai/gpt-oss-120b",
+  "tagline": "A C‑based Linux distribution for low‑level OS enthusiasts",
+  "what": "Resentment is a Linux distribution project written primarily in C. It provides the source code and build scripts needed to assemble a custom Linux system.",
+  "why": "It aims to give developers control over the low‑level components of a Linux distro, avoiding heavyweight abstractions. It is intended for OS hobbyists and engineers who want to build or study a minimalist system.",
+  "when": "Use it when you need a lightweight, C‑centric Linux base or want to experiment with distro construction. The project has been active since 2023 with recent updates as of Dec 2025, but remains early‑stage.",
+  "stack": [
+   "C",
+   "Linux kernel",
+   "POSIX",
+   "Makefiles",
+   "Bootloader"
+  ],
+  "highlights": [
+   "Source code primarily in C",
+   "Build scripts for assembling a distro",
+   "Active development with recent commits",
+   "Targeted at low‑level OS developers"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:40:32.283Z"
+ },
+ "NATRAJ": {
+  "sig": "2025-12-25T07:52:37Z|NATRAJ - A localized End to End encrypted server with Neural Networks to act as a packet filtering firewall and accessing the internet using proxy for actual device ID masking.|openai/gpt-oss-120b",
+  "tagline": "Local encrypted server with AI‑powered packet filtering and IP masking",
+  "what": "NATRAJ is a prototype Jupyter‑Notebook implementation of a localized server that terminates internal device traffic, encrypts it end‑to‑end, and forwards it through a proxy to the internet. It incorporates two convolutional neural networks: one to classify packet payloads and another to monitor traffic direction, acting as a dual‑stage firewall. The system also assigns unique hash identifiers to devices and routers for internal routing.",
+  "why": "The project addresses rising cyber‑attack risks by centralising network access through a single, cryptographically protected gateway. By filtering packets with neural nets and masking the external IP, it aims to protect both internal assets and the outward‑facing internet connection for enterprises, organizations, or privacy‑conscious users.",
+  "when": "Use NATRAJ when you need a research‑grade, proof‑of‑concept environment to explore AI‑driven firewalling and IP masking on a private LAN. The code is experimental and best suited for academic or testing scenarios rather than production deployment. It is actively maintained as of its last push in late 2025.",
+  "stack": [
+   "Python",
+   "Jupyter Notebook",
+   "Convolutional Neural Networks",
+   "End‑to‑End Encryption",
+   "IP Hashing",
+   "Proxy Server"
+  ],
+  "highlights": [
+   "End‑to‑end encrypted intra‑network communication",
+   "1‑D CNN packet classification for anomaly detection",
+   "Per‑device hash table for deterministic routing",
+   "Proxy integration to hide external IP"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:40:50.639Z"
+ },
+ "REST-API": {
+  "sig": "2025-12-25T07:50:16Z|REST API  for performing CURD operations using Spring boot and Mongo-DB|openai/gpt-oss-120b",
+  "tagline": "Spring‑Boot REST API for MongoDB CRUD services",
+  "what": "A backend service built with Spring Boot that exposes RESTful endpoints for Create, Read, Update and Delete operations on a MongoDB datastore. The codebase is packaged as a ready‑to‑run Spring application.",
+  "why": "It solves the need for a quick, out‑of‑the‑box CRUD layer when integrating front‑end projects with a MongoDB backend. Ideal for developers who want a minimal service without writing boilerplate data‑access code.",
+  "when": "Reach for it when you need a simple CRUD API for a MongoDB‑backed project or a prototype backend. The repository has recent commits (last push Dec 2025) indicating it is still maintained, though it remains a starter template rather than a full‑featured framework.",
+  "stack": [
+   "spring-boot",
+   "mongodb",
+   "rest",
+   "crud",
+   "java"
+  ],
+  "highlights": [
+   "CRUD endpoints for MongoDB",
+   "Spring Boot auto‑configuration",
+   "Single‑module Maven/Gradle build",
+   "Ready for container deployment"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:41:01.382Z"
+ },
+ "Financer": {
+  "sig": "2025-12-25T07:45:49Z|A Common Platform for Finance analysis.|openai/gpt-oss-120b",
+  "tagline": "Streamlit‑based finance analysis platform with multiple dashboards",
+  "what": "Financer is a Python project built on Streamlit that offers several finance‑focused dashboards, including stocks, real‑time metrics, MPG and generic data visualisation. It can be launched locally via a simple pip install and Streamlit command or run as a pre‑built Docker container.",
+  "why": "It provides a single, ready‑to‑use interface for analysts, investors or students to explore financial data without writing custom code. The tool consolidates common finance visualisations, reducing setup time and technical overhead.",
+  "when": "Use Financer when you need an interactive finance dashboard quickly, either for prototyping or routine analysis. The repository shows recent activity (last push Dec 2025) and is usable out‑of‑the‑box via pip or Docker.",
+  "stack": [
+   "Python",
+   "Streamlit",
+   "Docker",
+   "Pandas",
+   "Data‑Visualization"
+  ],
+  "highlights": [
+   "Multiple finance dashboards (Stocks, Real‑Time, MPG)",
+   "Run locally with Streamlit or as a Docker container",
+   "Install via pip requirements or pull Docker image",
+   "Active development with recent commits (2025)"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:41:09.866Z"
+ },
+ "Texter": {
+  "sig": "2025-12-25T07:45:24Z|A Common Platform for Text analysis in your documents.|openai/gpt-oss-120b",
+  "tagline": "Unified notebook for text cleaning, emotion detection, summarization, entity extraction",
+  "what": "Texter is a collection of Jupyter notebooks that bundle common NLP tasks such as cleaning, emotion classification, summarization, and entity checking. It can be run locally via a Python environment or launched as a Docker container using the provided image. The notebooks expose configurable pipelines for processing plain text or URLs.",
+  "why": "Many analysts need a quick, reproducible way to preprocess and analyse document text without wiring together multiple libraries. Texter targets data scientists, researchers, and developers who want an out‑of‑the‑box solution for exploratory text analysis and reporting.",
+  "when": "Reach for Texter when you have unstructured documents and need an end‑to‑end workflow for cleaning, sentiment, summarisation, or entity extraction. The project is actively maintained (last push Dec 2025) and includes recent enhancements, but it remains a notebook‑centric prototype rather than a production‑grade service.",
+  "stack": [
+   "Python",
+   "Jupyter Notebook",
+   "NLP",
+   "Docker",
+   "Text Cleaning"
+  ],
+  "highlights": [
+   "Text cleaning with case, stopwords, URLs, emails, numbers",
+   "Emotion classification with updated accuracy",
+   "Summarization and multi‑language entity extraction",
+   "Docker image for one‑click deployment"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:41:21.757Z"
+ },
+ "github.sh": {
+  "sig": "2025-12-25T07:44:51Z|Script to automate git from working directory.|openai/gpt-oss-120b",
+  "tagline": "Menu‑driven Git automation from any project folder",
+  "what": "github.sh is a script that provides a simple text menu to run common Git commands from the current working directory. After a one‑time configuration it can be reused across projects. It is written in Python but invoked as a .sh file.",
+  "why": "It removes the need to remember Git command syntax, helping developers and teams who work from the terminal frequently. Ideal for users who prefer a guided interface, especially on Windows via WSL.",
+  "when": "Use it when you want quick Git actions without typing full commands, such as committing, pushing, pulling, or branching. The repository has recent activity (last push Dec 2025) indicating it is maintained.",
+  "stack": [
+   "Python",
+   "Shell",
+   "Git",
+   "CLI",
+   "Menu",
+   "WSL"
+  ],
+  "highlights": [
+   "Menu‑driven interface for common Git actions",
+   "One‑time configuration per project",
+   "Works on Linux and Windows via WSL",
+   "Requires only write permission on the script file"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:41:32.430Z"
+ },
+ "Rak_sh_ak": {
+  "sig": "2025-12-25T07:43:06Z|An image detection app designed for the farmers to detect plant diseases and get information about it, just by clicking the image of the plant.|openai/gpt-oss-120b",
+  "tagline": "Free mobile app that lets farmers identify plant issues from a photo",
+  "what": "Rak_sh_ak is a mobile application that lets users capture an image of a crop and sends it to an on‑device or cloud‑based machine‑learning model for classification. The current model can recognise flowers and animals and returns the predicted class, confidence and basic information. The app also includes registration, a problem‑dashboard and a chat channel to reach human experts.",
+  "why": "Many small‑scale farmers lack easy access to plant pathology expertise, causing delayed treatment and loss. The app aims to give instant visual diagnostics and a pathway to expert advice, reducing reliance on external visits. It targets farmers with basic smartphones who need quick, offline‑capable support.",
+  "when": "Use it when you spot a suspicious leaf, stem or fruit and need an immediate hint about the problem. The project is still early‑stage – the ML model is limited to generic categories and the disease database is under development, with regular nightly updates. Expect a functional prototype rather than a production‑ready disease detector.",
+  "stack": [
+   "Android",
+   "TensorFlow Lite",
+   "ML model",
+   "Offline inference",
+   "Chat support"
+  ],
+  "highlights": [
+   "Free, no‑cost mobile app",
+   "Single‑tap image upload for classification",
+   "Fallback to expert chat when confidence < 51%",
+   "Model and solution repos refreshed every 24 h"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:41:47.189Z"
+ },
+ "Image_To_Sketch": {
+  "sig": "2025-12-25T07:39:19Z|A simple python program to convert image into sketch.|openai/gpt-oss-120b",
+  "tagline": "Turn photos into sketches with a single Python script",
+  "what": "Image_To_Sketch is a small Python utility that reads an image file, applies a sketch‑style transformation, and writes the result back to the same folder with a \"sketch_\" prefix. It runs from the command line and interacts via a simple prompt for the input path.",
+  "why": "Many users need a quick way to generate sketch‑like versions of photos for artistic or preprocessing purposes without installing heavyweight software. This script targets developers, hobbyists, or anyone with Python who wants an on‑demand, script‑based solution.",
+  "when": "Use it when you have a local image and need a sketch version instantly, especially in scripts or small projects. The repository is actively maintained as of its last push in late 2025 and works on any platform with Python installed.",
+  "stack": [
+   "Python",
+   "CLI",
+   "image processing"
+  ],
+  "highlights": [
+   "Prompt‑driven path input",
+   "Outputs prefixed \"sketch_\" files",
+   "Runs with only Python installed",
+   "Cross‑platform command‑line tool"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:42:09.658Z"
+ },
+ "NetChat": {
+  "sig": "2025-12-25T07:35:26Z|A Java based chatting application that can be used to communicate with other systems on a network. |openai/gpt-oss-120b",
+  "tagline": "Java chat app for real‑time, encrypted messaging over a network",
+  "what": "NetChat is a desktop Java application that enables users to exchange messages instantly across a network. It persists chat history in a MySQL database and encrypts traffic to protect privacy.",
+  "why": "It fills the need for a lightweight, self‑hosted chat solution when corporate or cloud messengers are unsuitable. Ideal for small teams, labs, or LAN parties that require secure, on‑premise communication.",
+  "when": "Reach for NetChat when you need a simple, private chat system that you can run on any machine with a JDK and MySQL. The project is actively maintained (last push Dec 2025) but requires manual database setup and configuration.",
+  "stack": [
+   "Java",
+   "MySQL",
+   "Swing",
+   "AES Encryption",
+   "Desktop"
+  ],
+  "highlights": [
+   "Real‑time messaging with instant delivery",
+   "AES‑based encryption for private chats",
+   "MySQL backend stores conversation history",
+   "Configurable via a simple properties file"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:42:17.141Z"
+ },
+ "ni_sh_a.char-IDE": {
+  "sig": "2025-12-25T07:33:47Z|A simple IDE to execute Python codes|openai/gpt-oss-120b",
+  "tagline": "Lightweight Python IDE with run button and syntax highlighting",
+  "what": "ni_sh_a.char-IDE is a minimal graphical IDE that lets you write, edit, and execute Python scripts. It provides a simple editor with syntax highlighting and basic clipboard and undo/redo actions.",
+  "why": "It targets users who need a quick, no‑frills environment to test Python snippets without leaving the terminal or opening a full‑featured IDE. Ideal for learners, hobbyists, or quick prototyping.",
+  "when": "Use it when you want to run short Python programs on a system with only Python installed. The project is actively maintained as of its last push in late 2025, but remains a basic tool without advanced features.",
+  "stack": [
+   "Python",
+   "Shell scripts",
+   "Tkinter (GUI)",
+   "Syntax highlighting",
+   "MIT License"
+  ],
+  "highlights": [
+   "Simple editor with syntax highlighting",
+   "Run button executes code and shows output",
+   "Basic edit actions: copy, paste, undo/redo",
+   "Runs on any system with Python installed"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:42:28.461Z"
+ },
+ "SHE": {
+  "sig": "2025-12-25T07:31:22Z|A Programming Language|openai/gpt-oss-120b",
+  "tagline": "Beginner-friendly interpreted language with simple syntax and built‑in encryption",
+  "what": "SHE is a custom programming language interpreted by a Python runtime. It provides a REPL and the ability to execute .she files, supporting arithmetic, variables, conditionals, loops, functions, strings, and lists. The interpreter also includes built‑in Kaalka encryption and decryption utilities.",
+  "why": "It targets learners and hobbyists who want an easy-to‑read language for teaching fundamentals or quick scripting. The integrated encryption functions let users experiment with simple data protection without external tools. Its minimalistic design lowers the barrier to entry compared to full‑featured languages.",
+  "when": "Reach for SHE when you need a lightweight, educational scripting environment or want to prototype algorithms with clear syntax. The core language features are stable, and the project has recent activity up to late 2025, though it remains a niche interpreter. Expect basic standard library functionality and community‑driven improvements.",
+  "stack": [
+   "Python",
+   "Interpreter",
+   "Educational",
+   "Scripting",
+   "Encryption",
+   "REPL"
+  ],
+  "highlights": [
+   "Simple syntax for arithmetic, variables, loops, functions",
+   "Built‑in Kaalka encryption/decryption functions",
+   "Run scripts with RUN command and view PRINT output",
+   "Test suite validates core language features"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:42:50.518Z"
+ },
+ "Mailbook": {
+  "sig": "2025-12-25T07:30:30Z|A JSP-JDBC-MySQL-Servlet based Java project to demonstrate CURD Operations where Users can create, update, edit and delete their name, email and country respectively. |openai/gpt-oss-120b",
+  "tagline": "JSP‑JDBC‑MySQL CRUD demo for user management",
+  "what": "A Maven‑based Java web application that uses JSP, Servlets, JDBC and MySQL to let users create, read, update and delete simple user records (name, email, country). The source includes the servlet code, JSP views, a db.properties file for connection settings, and a standard web.xml descriptor. It is intended to be built in an IDE or via Maven and deployed to Apache Tomcat.",
+  "why": "It provides a concrete, end‑to‑end example for developers learning the classic Java EE stack, showing how to wire JSP pages to servlets and a relational database. Ideal for students, tutorials, or anyone needing a quick reference implementation of CRUD operations in Java web apps.",
+  "when": "Reach for this project when you need a lightweight starter template or teaching material for JSP/Servlet‑based CRUD functionality. The repository has recent activity (last push Dec 2025) and follows a stable Maven layout, though you may need to adjust versions for newer Java or Tomcat releases.",
+  "stack": [
+   "Java",
+   "JSP",
+   "Servlet",
+   "JDBC",
+   "MySQL",
+   "Maven"
+  ],
+  "highlights": [
+   "Full CRUD UI with JSP pages",
+   "Database connection configurable via db.properties",
+   "Maven‑standard webapp structure",
+   "Deployable on Apache Tomcat"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:42:58.689Z"
+ },
+ "Safe-Editor": {
+  "sig": "2025-12-25T07:29:32Z|A user authenticated text editor that stores the username and password in SHA-256 bit encryption form.|openai/gpt-oss-120b",
+  "tagline": "Secure Java text editor with SHA-256 user authentication",
+  "what": "Safe Editor is a desktop text editor written in Java that requires users to log in before editing. Credentials are stored as SHA‑256 hashes, not plain text. It provides a minimal UI for creating and editing plain‑text files.",
+  "why": "It addresses the need for a lightweight, self‑contained editor where access must be restricted without deploying full‑blown security infrastructure. Ideal for internal tools, labs, or educational settings where simple authentication suffices.",
+  "when": "Reach for Safe Editor when you need a quick, authenticated editing tool on any platform with a Java runtime. The project has been maintained since 2022 and saw its latest commit in late 2025, but it offers only basic editing features and minimal security hardening.",
+  "stack": [
+   "Java",
+   "Swing",
+   "SHA-256",
+   "Desktop",
+   "TextEditor"
+  ],
+  "highlights": [
+   "User login with SHA‑256 hashed credentials",
+   "Plain‑text editing interface",
+   "Standalone Java application (no external dependencies)",
+   "Simple credential storage implementation"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:43:05.276Z"
+ },
+ "Emessages": {
+  "sig": "2025-12-25T07:25:00Z|Image Stegnography Tool for Encoding and Decoding a picture with encrypted message.|openai/gpt-oss-120b",
+  "tagline": "Java tool to embed and retrieve encrypted messages in images",
+  "what": "Emessages is a Java application that hides a text payload inside an image file using steganography and optional encryption. It provides both encoding (embedding) and decoding (extraction) functions, producing a new image with the hidden data or revealing the original message from a stego‑image.",
+  "why": "It addresses the need for covert communication by allowing users to conceal information within ordinary pictures, making the data less noticeable to casual observers. The tool is useful for security researchers, developers, or hobbyists who require simple, programmatic steganography without external services.",
+  "when": "Reach for Emessages whenever you need to embed a secret note in an image or recover one from an existing stego‑image. The repository shows recent activity (last push 2025) indicating it is maintained, though documentation is minimal.",
+  "stack": [
+   "Java",
+   "Steganography",
+   "Image Processing",
+   "Cryptography",
+   "CLI"
+  ],
+  "highlights": [
+   "Encode text into PNG/JPEG files",
+   "Decode hidden messages from images",
+   "Optional encryption of the payload",
+   "Command‑line interface for batch use"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:43:14.066Z"
+ },
+ "Touropedia": {
+  "sig": "2025-12-25T07:23:57Z|A responsive travel website using HTML, SCSS, CSS and Javascript.|openai/gpt-oss-120b",
+  "tagline": "Responsive travel site template built with HTML, SCSS, and JavaScript",
+  "what": "Touropedia is a static, responsive travel website template. It combines HTML markup, SCSS for styling, CSS, and JavaScript to deliver a mobile‑friendly UI.",
+  "why": "It gives developers and designers a ready‑made front‑end foundation for travel‑focused sites, cutting down on layout and responsiveness work. Ideal for freelancers, agencies, or hobbyists building travel blogs or agency pages.",
+  "when": "Use it when you need a quick, responsive front‑end for a travel site without backend code. The repository has been updated through late 2025, indicating a stable, production‑ready template.",
+  "stack": [
+   "HTML",
+   "SCSS",
+   "JavaScript",
+   "Responsive Design",
+   "Front-end"
+  ],
+  "highlights": [
+   "Fully responsive layout for desktop and mobile",
+   "Styled with SCSS, compiled to CSS",
+   "Includes basic JavaScript interactions",
+   "No backend dependencies"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:43:23.647Z"
+ },
+ "Android": {
+  "sig": "2025-12-24T10:36:08Z|DuckDuckGo Android App|openai/gpt-oss-120b",
+  "tagline": "Privacy‑first Android browser from DuckDuckGo",
+  "what": "The DuckDuckGo Android app is an open‑source mobile browser written in Kotlin. It provides DuckDuckGo search integration and privacy‑focused browsing features. The source uses git submodules for shared components.",
+  "why": "It addresses users who want a mobile web experience that blocks trackers and does not collect personal data. It is aimed at privacy‑conscious Android users and developers interested in contributing to a trusted search platform.",
+  "when": "Choose this app when you need a privacy‑oriented browser on Android without proprietary code. The project is actively maintained, with recent commits as of late 2025, but still relies on community contributions for new features.",
+  "stack": [
+   "Kotlin",
+   "Android",
+   "Jetpack",
+   "MVVM",
+   "Git submodules",
+   "Apache-2.0"
+  ],
+  "highlights": [
+   "Open‑source Android browser under Apache 2.0",
+   "Built with Kotlin and modern Android Jetpack libraries",
+   "Uses git submodules for shared components",
+   "Provides privacy‑focused search and tracking protection"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:43:31.848Z"
+ },
+ "Dockerfile": {
+  "sig": "2025-12-19T09:54:03Z|Dockerfile for render image|openai/gpt-oss-120b",
+  "tagline": "Dockerfile to build a ready‑to‑run render container",
+  "what": "This repository contains a single Dockerfile that defines a container image for rendering tasks. It specifies the base image, required packages, and an entrypoint to start the render service.",
+  "why": "It provides a reproducible environment for rendering workloads, avoiding manual dependency installation. Ideal for developers or CI pipelines that need a consistent render setup.",
+  "when": "Use it when you need a quick, isolated render environment—for testing, CI, or local development. The repo currently only offers the Dockerfile, so you must build the image yourself.",
+  "stack": [
+   "Docker",
+   "Dockerfile",
+   "Container",
+   "Rendering",
+   "Linux"
+  ],
+  "highlights": [
+   "Defines a Dockerfile for a render image",
+   "Specifies base image and required packages",
+   "Ready to build with docker build",
+   "Minimal repo – only the Dockerfile"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:43:38.031Z"
+ },
+ "YouTube-Shorts-Automation": {
+  "sig": "2025-12-07T09:41:17Z|A youtube shorts automation. From idea generation to upload end to end.|openai/gpt-oss-120b",
+  "tagline": "Automate end‑to‑end YouTube Shorts creation and upload",
+  "what": "A Python pipeline that generates a Shorts idea, writes a script, produces a TTS voiceover, creates captions and a thumbnail, assembles the video with MoviePy, and uploads it to YouTube. The system runs on Render and removes temporary files after each run. Documentation and deployment guides are bundled in a single README.",
+  "why": "Creating YouTube Shorts manually is time‑consuming and requires multiple tools. This project automates the entire workflow, letting creators, marketers, or developers publish short‑form video at scale with minimal effort. It targets anyone who wants consistent, data‑driven Shorts without manual editing.",
+  "when": "Use it when you need daily or frequent Shorts without spending hours on production. The code is production‑ready as of December 2025 and includes deployment, verification, and cleanup steps. It’s suited for self‑hosted Render instances or similar cloud runtimes.",
+  "stack": [
+   "Python",
+   "MoviePy",
+   "edge‑tts",
+   "Gemini API",
+   "Render",
+   "YouTube Data API"
+  ],
+  "highlights": [
+   "Generates viral ideas via Gemini LLM",
+   "Creates voiceover with edge‑tts",
+   "Assembles video with MoviePy",
+   "Auto‑deletes ~100 MB of temp files after upload"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:44:08.150Z"
+ },
+ "Monsterrr": {
+  "sig": "2025-09-29T13:56:54Z|Creator, Organizer and Maintainer for ni_sh_a.char...|openai/gpt-oss-120b",
+  "tagline": "Autonomous AI for GitHub org management with Discord and email",
+  "what": "Monsterrr is a Python‑based service that combines a FastAPI web API and a Discord bot to automate GitHub organization tasks. It uses Groq‑hosted large language models to generate actions, reports, and ideas, and can run in various modes (web, worker, hybrid, all). The system includes email reporting and persistent state tracking.",
+  "why": "Large GitHub organizations need hands‑free administration, consistent reporting, and quick communication channels. Monsterrr automates routine repo and org actions, surfaces AI‑generated insights, and notifies teams via Discord and email, targeting org admins and DevOps engineers.",
+  "when": "Use Monsterrr when you want AI‑driven automation for GitHub org workflows, real‑time Discord alerts, and daily email summaries. The project is production‑ready, with Render and Docker deployment guides, and active development as of late 2025.",
+  "stack": [
+   "Python",
+   "FastAPI",
+   "Discord.py",
+   "Groq AI models",
+   "Docker",
+   "Render"
+  ],
+  "highlights": [
+   "Production‑ready Render and Docker deployment",
+   "Four startup modes for flexible hosting",
+   "Model auto‑selection with rate‑limit fallback",
+   "Email + Discord reporting with persistent state"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:44:22.464Z"
+ },
+ "AuroraDB": {
+  "sig": "2025-08-16T18:31:34Z|A high-performance, distributed database management system|openai/gpt-oss-120b",
+  "tagline": "Python‑based distributed database built for speed",
+  "what": "AuroraDB is a database management system written in Python that targets high‑performance, distributed operation. It currently provides a core storage engine and a basic client API for CRUD actions. Further features such as replication and query optimisation are planned.",
+  "why": "Many Python projects need a lightweight, scalable data store without relying on external DB engines. AuroraDB aims to fill that gap by offering a native Python solution for distributed workloads. It is intended for developers and teams building scalable services in the Python ecosystem.",
+  "when": "Use AuroraDB when prototyping or experimenting with distributed data storage in Python, especially if you prefer an all‑Python stack. The project is in its infancy (first commit August 2025) and core features are still under development, so it is not yet production‑ready. Expect ongoing additions as the roadmap progresses.",
+  "stack": [
+   "Python",
+   "Distributed Systems",
+   "Database",
+   "High Performance"
+  ],
+  "highlights": [
+   "Core storage engine implemented in Python",
+   "Basic client API for CRUD operations",
+   "Roadmap includes data replication and query optimizer",
+   "First commit August 2025, early‑stage development"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:44:29.220Z"
+ },
+ "IntelliSenseHub": {
+  "sig": "2025-08-15T00:00:30Z|An AI-powered code completion and suggestion tool for various programming languages|openai/gpt-oss-120b",
+  "tagline": "AI-driven code completion for multiple languages",
+  "what": "IntelliSenseHub is a Python‑based tool that generates code completion and suggestion candidates using an AI model. It aims to work across a range of programming languages, offering context‑aware snippets as you type. The project currently contains the early scaffolding for the core model and interfaces.",
+  "why": "Developers spend time writing repetitive boilerplate and searching for API usage patterns. IntelliSenseHub targets programmers who want AI‑assisted autocomplete to speed up coding and reduce lookup overhead. It is intended for anyone looking to experiment with language‑agnostic code suggestions.",
+  "when": "Reach for IntelliSenseHub when you want to prototype AI‑powered autocomplete in a Python environment. The repository is at an initial stage – a single commit with a roadmap, not yet a usable product. Expect to contribute or test early concepts rather than deploy in production.",
+  "stack": [
+   "Python",
+   "Machine Learning",
+   "Natural Language Processing",
+   "Code Completion",
+   "AI"
+  ],
+  "highlights": [
+   "Python implementation of AI‑based code suggestions",
+   "Designed for multiple programming languages",
+   "Roadmap includes web UI and IDE integration",
+   "Early prototype – single initial commit"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:44:36.935Z"
+ },
+ "ATS": {
+  "sig": "2024-03-21T11:54:45Z|A resume parser and Applicant Tracker System for checking and scoring the resume against a requirement.|openai/gpt-oss-120b",
+  "tagline": "Automated resume parsing and scoring for streamlined hiring",
+  "what": "ATS is a Python‑based tool that parses PDF resumes, matches them against job requirements, and produces a suitability score. It includes a simple web interface for uploading resumes and entering criteria.",
+  "why": "Recruiters often spend hours manually reviewing CVs; ATS automates the initial screening to quickly identify candidates that meet defined skill and experience thresholds. It is aimed at small to medium hiring teams needing a lightweight, self‑hosted solution.",
+  "when": "Use it when you need a quick, on‑premise way to evaluate large numbers of PDFs without a commercial ATS. The codebase is recent (first commit March 2024) and appears to be in an early, functional stage with a Docker image provided.",
+  "stack": [
+   "Python",
+   "PDF parsing",
+   "Web UI",
+   "Scoring algorithm",
+   "Docker"
+  ],
+  "highlights": [
+   "Parses PDF resumes to extract skills and experience",
+   "Matches resume data to job requirements",
+   "Calculates a quantitative suitability score",
+   "Docker image available for easy deployment"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:44:44.489Z"
+ },
+ "DekkhO": {
+  "sig": "2024-03-05T07:19:35Z|This app uses newsapi.org to fetch the news from the internet and provides you with different categories to choose news from.|openai/gpt-oss-120b",
+  "tagline": "Android news reader powered by NewsAPI",
+  "what": "DekkhO is a Java‑based Android app that retrieves current articles from newsapi.org. It presents the headlines in a scrollable list with images, letting users pick from several news categories. The UI is built with RecyclerView and images are loaded via Picasso.",
+  "why": "Many Android users want a simple, category‑based news feed without ads or clutter. DekkhO solves this by providing a clean interface that pulls fresh articles in real time. It’s useful for developers looking for a ready‑made example of Retrofit networking in Android.",
+  "when": "Reach for DekkhO when you need a lightweight news client or a starter project for Android networking and UI patterns. The code was last pushed in March 2024, so it should compile with recent Android Studio versions but requires you to supply your own NewsAPI key.",
+  "stack": [
+   "Java",
+   "Android",
+   "Retrofit",
+   "Picasso",
+   "RecyclerView",
+   "NewsAPI"
+  ],
+  "highlights": [
+   "Live news fetched via NewsAPI",
+   "Category selection for headlines",
+   "Retrofit handles HTTP requests",
+   "Picasso loads and caches article images",
+   "RecyclerView displays scrollable article list"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:44:54.023Z"
+ },
+ "linux": {
+  "sig": "2023-10-01T07:31:38Z|Linux kernel source tree|openai/gpt-oss-120b",
+  "tagline": "World’s most widely used open‑source operating system kernel",
+  "what": "The Linux kernel source tree is the core of the Linux operating system, written primarily in C. It implements process scheduling, memory management, device drivers, networking, and file systems. The repository contains the full source, build system, and documentation.",
+  "why": "It provides a free, portable, monolithic kernel that runs on a vast range of hardware, from embedded devices to supercomputers. Developers and system integrators use it to build custom operating systems, add hardware support, or contribute improvements.",
+  "when": "Reach for it when you need to compile, configure, or modify the Linux kernel, develop drivers, or study kernel internals. The tree is actively maintained, with the latest changes pushed in October 2023, and follows the regular mainline release cycle.",
+  "stack": [
+   "C",
+   "Monolithic kernel",
+   "Device drivers",
+   "Networking",
+   "File systems",
+   "POSIX"
+  ],
+  "highlights": [
+   "Over 30 million lines of C code",
+   "Supports hundreds of CPU architectures",
+   "New mainline releases every 2–3 months",
+   "Comprehensive docs in Documentation/ (HTML/PDF)"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:44:59.909Z"
+ },
+ "Humsafar": {
+  "sig": "2023-09-14T04:22:27Z|Your very own web browser.|openai/gpt-oss-120b",
+  "tagline": "A lightweight Python‑based web browser",
+  "what": "Humsafar is a Python project that implements a basic web browser interface. It provides minimal navigation capabilities using Python's GUI and web rendering facilities. The codebase is small and intended as a learning or experimental tool.",
+  "why": "It targets developers or hobbyists who want to explore browser internals or need a simple, customizable browsing client. The project fills the niche of a minimal browser without the overhead of full‑featured browsers. It serves as a sandbox for Python GUI and web‑view integration.",
+  "when": "Reach for Humsafar when you need a lightweight browser for testing, demos, or education. The project is in an early prototype stage (last updated 2023) and is not suited for daily browsing or production use. Expect limited features and ongoing development.",
+  "stack": [
+   "Python",
+   "GUI toolkit (e.g., Tkinter/PyQt)",
+   "Web rendering component",
+   "Open‑source"
+  ],
+  "highlights": [
+   "Implemented in pure Python",
+   "Basic navigation UI (back, forward, address bar)",
+   "Very small footprint",
+   "Early prototype, not production‑ready"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:45:06.195Z"
+ },
+ "Secure-Rest-API": {
+  "sig": "2023-07-21T10:01:26Z|REST APIs secured with JSON web Tokens|openai/gpt-oss-120b",
+  "tagline": "JWT‑protected REST API starter in JavaScript",
+  "what": "A lightweight Node.js/Express project that demonstrates REST endpoints secured with JSON Web Tokens. It includes token issuance, verification middleware, and a few sample routes. The code is written in plain JavaScript for easy inspection.",
+  "why": "It serves developers who need a quick, runnable example of JWT‑based authentication for APIs, saving time on boiler‑plate setup. Ideal for learning or prototyping secure services without building auth from scratch.",
+  "when": "Reach for this repo when you are prototyping a JavaScript API that requires token‑based security or when learning how JWT integrates with Express. The fork was last updated in July 2023, so it provides a basic reference but may need modern dependency updates.",
+  "stack": [
+   "JavaScript",
+   "Node.js",
+   "Express",
+   "JSON Web Tokens",
+   "REST"
+  ],
+  "highlights": [
+   "Example JWT generation and verification",
+   "Express routes with token‑protected endpoints",
+   "Middleware for automatic token validation",
+   "Minimal setup, ready to run"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:45:11.898Z"
+ },
+ "JavaCURD": {
+  "sig": "2023-07-14T20:51:19Z|I have made a program in java to demonstrate CURD operation. The program uses MySQL database to store data which can be set using Xampp. The program resembles a book shop management system where you can enter book name, price and edition to store it and you can find the book in the database as well as you can edit the entries.|openai/gpt-oss-120b",
+  "tagline": "Java CRUD demo for a simple book shop system",
+  "what": "JavaCRUD is a small Java application that connects to a MySQL database and lets you create, read, update, and delete book records (name, price, edition). It ships with a sample SQL script to set up the required tables and runs via a console‑based menu. The code uses plain JDBC without any external ORM libraries.",
+  "why": "It serves as a hands‑on example for developers learning how to integrate Java with MySQL and implement basic CRUD operations. The project is useful for students or hobbyists building a simple inventory or book‑shop prototype. It also illustrates how to configure connection details for a local XAMPP server.",
+  "when": "Reach for JavaCRUD when you need a quick, runnable example of Java‑MySQL CRUD without extra frameworks. It is stable enough for educational purposes, though it lacks a graphical UI and advanced error handling. The last commit was in July 2023, so it reflects Java 8‑compatible code and MySQL 5/8 syntax.",
+  "stack": [
+   "Java",
+   "MySQL",
+   "JDBC",
+   "XAMPP",
+   "Console"
+  ],
+  "highlights": [
+   "Full create, read, update, delete cycle with MySQL",
+   "Plain JDBC implementation, no ORM",
+   "Includes ready‑to‑import database.sql script",
+   "Simple console menu for book management"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:45:19.271Z"
+ },
+ "Penn_It": {
+  "sig": "2023-07-14T20:48:42Z|The Notes App. Just Pen It and it will Remember for You|openai/gpt-oss-120b",
+  "tagline": "A simple Android notes app built with Kotlin",
+  "what": "Penn_It is an Android application written in Kotlin that lets users create, edit, and delete notes. It supports tagging for organization and offers a clean UI for managing notes.",
+  "why": "It addresses the need for a lightweight, on‑device note‑taking tool without cloud dependencies, targeting Android users who want quick, offline access to their ideas. Ideal for students, professionals, or anyone needing a personal reminder system.",
+  "when": "Use Penn_It when you need a straightforward notes manager on an Android phone or tablet. The codebase was last updated in July 2023 and remains functional for modern Android Studio builds, though it may lack recent library updates.",
+  "stack": [
+   "Kotlin",
+   "Android",
+   "Android Studio",
+   "Material Design"
+  ],
+  "highlights": [
+   "Create, edit, and delete notes directly on device",
+   "Tag notes with custom categories for easy filtering",
+   "Fully offline; no external services required",
+   "Open source under MIT license"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:45:27.915Z"
+ },
+ "Me_is_Me": {
+  "sig": "2023-07-14T20:41:57Z|A meme sharing app which uses reddit to fetch the memes.|openai/gpt-oss-120b",
+  "tagline": "Meme sharing Android app that pulls the latest Reddit memes",
+  "what": "Me_is_Me is an Android application written in Kotlin that displays memes fetched from Reddit. It provides a scrollable list where users can view individual memes and share them via Android's sharing intents.",
+  "why": "It gives Android users a quick way to browse the newest Reddit memes without opening the Reddit app or website. Ideal for meme enthusiasts who want a lightweight, dedicated viewer and sharing tool.",
+  "when": "Use it when you want a simple meme browser on your phone; the app is functional but still in a basic state, last updated July 2023 and may need updates for API changes. It runs on Android Studio with a standard setup.",
+  "stack": [
+   "Kotlin",
+   "Android",
+   "Reddit API",
+   "Android Studio",
+   "MIT License"
+  ],
+  "highlights": [
+   "Fetches latest memes directly from Reddit",
+   "Swipeable list with view and share actions",
+   "Clean Kotlin codebase for Android Studio",
+   "MIT‑licensed and open to contributions"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:45:36.562Z"
+ },
+ "duckduckgo-privacy-extension": {
+  "sig": "2023-07-11T21:28:44Z|DuckDuckGo Privacy Essentials browser extension for Firefox, Chrome.|openai/gpt-oss-120b",
+  "tagline": "Privacy‑focused DuckDuckGo extension for Firefox, Chrome, Edge",
+  "what": "The repository holds the source for DuckDuckGo Privacy Essentials, a JavaScript‑based browser extension that blocks trackers, forces HTTPS, and offers private search. It is packaged for Firefox, Chrome, Edge and other Chromium‑based browsers.",
+  "why": "It gives everyday users automatic protection against web tracking and insecure connections, addressing privacy concerns without manual configuration. Ideal for privacy‑conscious users and anyone wanting default safeguards while browsing.",
+  "when": "Deploy it when you need immediate, out‑of‑the‑box privacy protection across major browsers. The code was last updated in July 2023 and is maintained for bug fixes only; new features are not being accepted.",
+  "stack": [
+   "JavaScript",
+   "WebExtensions",
+   "Privacy",
+   "Apache-2.0",
+   "Browser Extension",
+   "Tracker Blocking"
+  ],
+  "highlights": [
+   "Blocks known trackers and third‑party cookies",
+   "Enforces HTTPS where possible",
+   "Shows privacy grade for each site",
+   "Available in Firefox, Chrome, Edge, Opera"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:45:46.132Z"
+ },
+ "Ecommerce": {
+  "sig": "2022-08-19T19:03:17Z|A dummy ecommerce website.|openai/gpt-oss-120b",
+  "tagline": "Static HTML demo of an online store",
+  "what": "Ecommerce is a simple static website built with plain HTML that showcases a mock online store layout. It includes placeholder product listings, a shopping cart UI, and basic navigation.",
+  "why": "It serves as a teaching aid or quick prototype for developers learning web design or needing a visual reference for e‑commerce pages. Intended for students, hobbyists, or anyone needing a non‑functional storefront example.",
+  "when": "Use it when you need a lightweight, zero‑dependency mockup of an e‑commerce front‑end, or as a starting point for styling experiments. The repository has not been updated since August 2022, so it reflects the state of the code at that time.",
+  "stack": [
+   "HTML",
+   "CSS",
+   "Static site"
+  ],
+  "highlights": [
+   "Pure HTML with no server‑side code",
+   "Includes sample product pages",
+   "Ready‑to‑open in any browser",
+   "No external dependencies"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:45:51.334Z"
+ },
+ "Gitapp": {
+  "sig": "2022-08-19T19:00:27Z|A github app to view user and add them as favorite.|openai/gpt-oss-120b",
+  "tagline": "Browse GitHub users and bookmark your favorites",
+  "what": "Gitapp is a Kotlin‑based Android application that connects to the GitHub API to display public user profiles. It lets you add any viewed user to a local favorites list for quick access later. The UI is designed for on‑the‑go browsing of developers.",
+  "why": "Developers, recruiters, or anyone interested in tracking GitHub contributors often need a lightweight way to look up profiles and keep a shortlist. Gitapp provides a focused tool without the overhead of the full GitHub website or desktop client.",
+  "when": "Reach for Gitapp when you need a fast mobile view of GitHub users and want to maintain a personal favorites list. The last code push was in August 2022, so the app is functional but may lack recent API or Android updates.",
+  "stack": [
+   "Kotlin",
+   "Android",
+   "GitHub API",
+   "Mobile UI"
+  ],
+  "highlights": [
+   "View public GitHub user profiles",
+   "Add or remove users from a favorites list",
+   "Favorites stored locally on the device",
+   "Simple, mobile‑first interface"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:45:56.629Z"
+ },
+ "BirthdayGreet": {
+  "sig": "2022-07-07T11:10:08Z|A Simple Birthday Greeting App to generate Birthday Greeting.|openai/gpt-oss-120b",
+  "tagline": "Kotlin app that creates personalized birthday greetings",
+  "what": "BirthdayGreet is a small Kotlin program that builds a birthday greeting message from user‑provided name and age. It outputs a ready‑to‑send text string.",
+  "why": "It helps people who need a quick, formatted birthday wish without writing it manually. Ideal for casual users or developers needing a sample Kotlin project.",
+  "when": "Reach for it when you need a simple greeting generator or a learning example in Kotlin. The project is a single‑commit prototype from 2022 and may lack polish or extensive features.",
+  "stack": [
+   "Kotlin",
+   "Gradle",
+   "CLI"
+  ],
+  "highlights": [
+   "Generates custom birthday messages",
+   "Runs as a command‑line tool",
+   "Single‑file Kotlin source",
+   "No external libraries required"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:46:09.796Z"
+ },
+ "UI_Dashboard": {
+  "sig": "2022-03-19T17:00:08Z|A simple UI dashboard using android studio.|openai/gpt-oss-120b",
+  "tagline": "A lightweight Android UI dashboard sample",
+  "what": "UI_Dashboard is a simple Android application written in Java and built with Android Studio. It showcases a basic dashboard layout using native UI components and XML layouts. The project serves as a runnable example for developers learning Android UI design.",
+  "why": "It provides a quick starting point for developers who need a ready-made dashboard UI without building it from scratch. Ideal for learning, prototyping, or teaching Android UI concepts.",
+  "when": "Reach for this repo when you need a minimal, functional dashboard prototype for an Android app. The code was last updated in 2022, so it reflects stable, pre‑AndroidX practices but may lack recent library updates.",
+  "stack": [
+   "Java",
+   "Android Studio",
+   "Android SDK",
+   "XML layouts",
+   "Material Design"
+  ],
+  "highlights": [
+   "Basic dashboard layout with cards",
+   "Uses native Android UI components",
+   "Ready-to-run Android Studio project",
+   "No external dependencies"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:46:15.792Z"
+ },
+ "CARE-webapp": {
+  "sig": "2021-05-11T11:45:00Z|This repository is of the project called CARE that team SHaKTiMaan made for Ministry of Women and Child Development under Smart India Hackathon 2020. ( We won it for our problem statement, AS121)|openai/gpt-oss-120b",
+  "tagline": "One‑stop platform for transparent child adoption and protection",
+  "what": "CARE is a dual‑component system comprising a web portal and a desktop application aimed at child protection agencies. The portal offers adoption‑eligibility recommendations, reporting of exploitation, district‑wide child visibility, action reminders, and admin‑configurable eligibility criteria. The desktop app provides live face‑recognition attendance using TensorFlow and OpenCV, works offline, and syncs data when online via secure JWT APIs.",
+  "why": "Child welfare bodies often struggle with fragmented data, making it hard to identify children eligible for adoption and to monitor their safety. CARE centralises records, automates eligibility scoring, and secures attendance tracking, serving child welfare committees, care institutions, and government officials.",
+  "when": "Use CARE when a district or state child welfare department needs a unified view of children, adoption recommendations, and reliable attendance logging. The repository was last updated in 2021 and remains in a prototype/maintenance state, so further development may be required for production use.",
+  "stack": [
+   "Web portal",
+   "Desktop app",
+   "TensorFlow",
+   "OpenCV",
+   "JWT",
+   "Offline sync"
+  ],
+  "highlights": [
+   "Recommendation engine for adoption‑eligible children",
+   "Live face‑recognition attendance with TensorFlow & OpenCV",
+   "Offline operation with automatic sync to central database",
+   "Secure JWT‑protected APIs and UUID child identifiers"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:46:25.402Z"
+ },
+ "dobby": {
+  "sig": "2020-09-20T00:52:02Z|Made for FOSS Hack 2020 (Free and Open Souce). Dobby is a chrome web extension that helps us find additional information about any word, phrase, or sentence we select while surfing the web.|openai/gpt-oss-120b",
+  "tagline": "Instant Wikipedia look‑ups from any web page",
+  "what": "Dobby is a Chrome web extension that displays a small popup with Wikipedia information for any word, phrase, or sentence you double‑click on while browsing. It queries the public Wikipedia API and renders the result in‑page.",
+  "why": "Finding definitions or context often requires opening a new tab or search engine. Dobby lets users get concise encyclopedia data without leaving the current page, targeting casual readers and researchers who need quick reference.",
+  "when": "Use Dobby when you need a fast fact check or background while reading online. The extension is functional but appears unmaintained, with the last code push in 2020, so compatibility with the latest Chrome manifest version may vary.",
+  "stack": [
+   "Chrome Extension",
+   "JavaScript",
+   "Wikipedia API",
+   "HTML/CSS",
+   "Manifest V2"
+  ],
+  "highlights": [
+   "Double‑click any word to fetch Wikipedia summary",
+   "Popup appears inline without leaving page",
+   "Uses public Wikipedia REST API",
+   "Lightweight, no external dependencies"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "at": "2026-08-18T06:46:33.203Z"
+ }
+}
