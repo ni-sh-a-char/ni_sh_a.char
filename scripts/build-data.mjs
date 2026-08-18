@@ -85,7 +85,9 @@ async function summarise(repo, text) {
   const body = {
     model: MODEL,
     temperature: 0.4,
-    max_tokens: 900,
+    // Reasoning models spend part of this budget thinking before the JSON starts,
+    // so leave generous headroom — 900 truncated mid-document.
+    max_tokens: 3000,
     response_format: { type: 'json_object' },
     messages: [
       { role: 'system', content: PROMPT },
@@ -113,15 +115,15 @@ async function summarise(repo, text) {
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${AI_KEY}` },
       body: JSON.stringify(body),
     })
-    if (res.status === 429 || res.status >= 500) {
-      const wait = Number(res.headers.get('retry-after')) * 1000 || 4000 * (attempt + 1)
-      console.log(`  rate limited (${res.status}), waiting ${wait}ms`)
-      await sleep(wait)
-      continue
+    if (res.ok) {
+      const json = await res.json()
+      return JSON.parse(json.choices[0].message.content)
     }
-    if (!res.ok) throw new Error(`AI ${res.status}: ${await res.text()}`)
-    const json = await res.json()
-    return JSON.parse(json.choices[0].message.content)
+    const detail = (await res.text()).slice(0, 300)
+    // json_validate_failed is a sampling accident, not a bad request — resample it.
+    const retryable = res.status === 429 || res.status >= 500 || detail.includes('json_validate_failed')
+    if (!retryable || attempt === 3) throw new Error(`AI ${res.status}: ${detail}`)
+    await sleep(Number(res.headers.get('retry-after')) * 1000 || 3000 * (attempt + 1))
   }
   throw new Error('AI retries exhausted')
 }
