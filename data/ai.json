@@ -1,26 +1,26 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-08-19T04:52:06Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static org site that auto‑summarizes repos with AI",
-  "what": "A pure static website (HTML, CSS, JavaScript) hosted on GitHub Pages that lists every public repository in the ni_sh_a.char organisation. It renders a pre‑generated JSON snapshot and optionally fetches fresh data from the GitHub API. AI‑written summaries are added daily via a GitHub Actions workflow.",
-  "why": "Maintaining manual documentation for many repos is tedious; this site provides an always‑up‑to‑date, human‑readable overview for developers, contributors, and visitors. It solves the need for quick insight into what each project does and why it exists without requiring a separate docs site.",
-  "when": "Use it whenever you need a quick catalog of the organisation’s public projects, especially when exploring or onboarding. The site is production‑ready, refreshed daily, and falls back to the cached snapshot if the API is rate‑limited or offline.",
+  "sig": "2026-08-20T04:53:40Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static org site that auto‑summarises repos with AI",
+  "what": "A static website hosted on GitHub Pages that shows every public repository in the ni_sh_a.char organization. It renders a JSON snapshot of repo metadata and adds AI‑generated breakdowns of each project’s purpose and usage. The site is built with plain HTML, CSS and JavaScript, without any framework or build step.",
+  "why": "Maintaining a current overview of an organization’s repos is tedious; this site automates that by pulling repo data and generating concise AI summaries. It’s useful for developers, contributors, and anyone browsing the org’s work who wants quick context without reading each README.",
+  "when": "Use it whenever you need a quick, up‑to‑date catalogue of the org’s projects, such as onboarding new contributors or exploring available tools. The repository is actively maintained: a daily GitHub Action refreshes the data and regenerates AI summaries, and the static site works even offline with the cached snapshot.",
   "stack": [
    "JavaScript",
    "HTML",
    "CSS",
    "GitHub Pages",
    "GitHub Actions",
-   "LLM"
+   "LLM API"
   ],
   "highlights": [
-   "Static HTML/CSS/JS, no build step",
-   "Daily data refresh via GitHub Actions",
-   "AI‑generated repository summaries",
-   "Offline‑friendly cached snapshot"
+   "Lists every public repo with AI‑written summary",
+   "Static site, no framework or build step",
+   "Daily GitHub Action regenerates data via LLM",
+   "Falls back to cached snapshot if API rate‑limited"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-20T04:53:37.847Z"
+  "at": "2026-08-21T04:54:08.347Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -1084,26 +1084,26 @@
   "at": "2026-08-18T06:49:40.520Z"
  },
  "Galiyaara": {
-  "sig": "2026-08-18T12:08:54Z|A photography portfolio you walk through instead of scroll — a moonlit 3D arcade rendered live in the browser. Drop a photo in a folder, push, and it's on the wall.|openai/gpt-oss-120b",
-  "tagline": "Walk through a moonlit 3D photo gallery in your browser",
-  "what": "Galiyaara is a JavaScript‑only website that renders a night‑lit arcade corridor with photographs hanging on its arches. It uses Three.js/WebGL to let visitors scroll or walk (WASD, drag, touch) through the space, and clicking a frame loads the full‑resolution image. The site is built on GitHub Pages with a single HTML file and no external framework.",
-  "why": "Typical photography portfolios present images in static grids, limiting immersion. Galiyaara gives photographers a unique, immersive way to showcase work, and provides viewers an exploratory experience. It’s aimed at creators who want a distinctive, self‑hosted portfolio without a third‑party gallery service.",
-  "when": "Use it when you want an interactive, web‑based portfolio that feels like walking through an exhibition. The repository is actively maintained (last push Aug 2026) and ready for forking, customizing, and deploying via GitHub Actions. It works out‑of‑the‑box with only a photos folder and optional AI key.",
+  "sig": "2026-08-20T08:33:11Z|A photography portfolio you walk through instead of scroll — a moonlit 3D arcade rendered live in the browser. Drop a photo in a folder, push, and it's on the wall.|openai/gpt-oss-120b",
+  "tagline": "Walk through a moonlit 3‑D gallery for your photos",
+  "what": "Galiyaara is a static website that displays photographs inside a navigable 3‑D arcade rendered with Three.js in the browser. Images placed in the photos folder are processed by GitHub Actions (resizing, colour sampling, optional AI‑generated metadata) and then appear on the virtual walls. The site is pure vanilla‑JS, hosted on GitHub Pages.",
+  "why": "Typical photo portfolios use scrolling grids, which limit immersion. Galiyaara provides an interactive corridor where visitors can walk, look around, and focus on each image, making the viewing experience more engaging. It targets photographers and creators who want a simple, code‑free way to showcase work in a memorable 3‑D environment.",
+  "when": "Use it when you need a lightweight, self‑hosted portfolio that requires no build tools and updates automatically on push. The repository is actively maintained (last push 2026‑08‑20) and includes CI for image processing. It’s ready to fork and deploy immediately.",
   "stack": [
-   "threejs",
-   "webgl",
-   "vanilla-js",
-   "github-pages",
-   "static-site",
-   "ai‑curation"
+   "JavaScript",
+   "Three.js",
+   "WebGL",
+   "GitHub Pages",
+   "GitHub Actions",
+   "vanilla-js"
   ],
   "highlights": [
-   "Single‑file HTML with vanilla JavaScript, no framework",
-   "GitHub Actions auto‑resize images and generate AI titles/captions",
-   "Walkable 3D corridor rendered in real time with Three.js",
-   "Keyboard, mouse, touch, and pointer‑lock navigation"
+   "Moonlit 3‑D arcade rendered live in the browser",
+   "Walk with WASD or scroll to navigate the gallery",
+   "GitHub Actions auto‑resize images and generate optional AI captions",
+   "No framework – single HTML file and vanilla JS"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-19T04:51:56.110Z"
+  "at": "2026-08-21T04:54:04.677Z"
  }
 }
