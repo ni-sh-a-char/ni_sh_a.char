@@ -1,26 +1,26 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-08-26T04:56:01Z|Website for the organization|openai/gpt-oss-120b",
+  "sig": "2026-08-27T15:15:04Z|Website for the organization|openai/gpt-oss-120b",
   "tagline": "Static org site with AI‑generated repo summaries",
-  "what": "ni_sh_a.char is a static website that lists every public repository in the ni_sh_a.char GitHub organization. It shows an AI‑written breakdown of each project’s purpose, motivation and typical use cases. The site loads a pre‑generated JSON snapshot and makes a single unauthenticated GitHub API request for any newer repos.",
-  "why": "Maintaining an up‑to‑date overview of an organization’s repos is tedious, especially for newcomers. This site automatically generates concise, AI‑crafted descriptions so developers and stakeholders can quickly understand what each repo does and why it exists. It is aimed at anyone browsing the organization’s work, from potential contributors to external users.",
-  "when": "Use it when you need a quick, human‑readable catalog of the organization’s public projects without visiting each repository individually. The site is live on GitHub Pages and refreshed daily via a GitHub Actions workflow, but it also works offline using the cached JSON snapshot.",
+  "what": "A public website for the ni_sh_a.char organization built with plain HTML, CSS and JavaScript. It displays every public repository in the org, adding AI‑written descriptions of what each project does, why it exists, and when to use it. The site is served directly from GitHub Pages with no build step or framework.",
+  "why": "Maintaining up‑to‑date documentation for many repositories is time‑consuming; this site automates the overview using a daily GitHub Actions workflow and a free LLM. It helps visitors, contributors, and potential users quickly understand the org’s work without manual curation.",
+  "when": "Use it to browse the organization’s repo catalog or as a starter template for similar static org sites. The project is actively maintained, with daily data refreshes and live deployment on GitHub Pages.",
   "stack": [
    "JavaScript",
    "HTML",
    "CSS",
    "GitHub Pages",
    "GitHub Actions",
-   "LLM integration"
+   "LLM API"
   ],
   "highlights": [
-   "Zero‑build static site served directly from GitHub Pages",
-   "AI‑generated repo summaries refreshed daily via GitHub Actions",
-   "Falls back to cached JSON if API rate‑limited or offline",
-   "Filters out internal repos like monsterrr-* and .github"
+   "Static site, no build step required",
+   "AI‑generated summaries refreshed daily",
+   "Fallback to cached data if GitHub API is rate‑limited",
+   "Configurable LLM via repository secrets (Groq or OpenRouter)"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-27T15:15:01.393Z"
+  "at": "2026-08-28T16:39:35.504Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -157,26 +157,27 @@
   "at": "2026-08-18T06:40:06.677Z"
  },
  "RESENTMENT---kernel": {
-  "sig": "2025-12-25T07:54:23Z||openai/gpt-oss-120b",
-  "tagline": "A minimal kernel that prints a message during boot",
-  "what": "RESENTMENT‑KERNEL is a shell‑based project that builds a simple kernel image which outputs a custom message when the system boots. It ships a Docker image that contains the build environment and required tools.",
-  "why": "It serves as a teaching aid for developers who want to see how kernel boot messages work without setting up a full toolchain. It’s useful for hobbyists experimenting with low‑level boot sequences.",
-  "when": "Use it when you need a quick, reproducible kernel build to demonstrate boot‑time output, or when learning kernel compilation in a containerized setup. The repository has been maintained up to late 2025 but remains a minimal example rather than a production kernel.",
+  "sig": "2026-08-28T12:40:30Z|A capability-secure, AI-native kernel for x86_64, ARM64 and RISC-V. Authority expires, the system is a graph you can hash, and inference is a scheduling class.|openai/gpt-oss-120b",
+  "tagline": "Capability‑secure AI‑native microkernel for x86_64, ARM64 & RISC‑V",
+  "what": "RESENTMENT is a from‑scratch operating system kernel written in C that runs on x86_64, ARM64 and RISC‑V. It introduces expiring, cryptographically sealed capabilities and models the entire kernel state as a Merkle DAG. AI workloads are treated as native kernel objects with a dedicated scheduling class.",
+  "why": "Conventional kernels struggle with revocation, reproducible state and safe AI execution. RESENTMENT solves these by making authority time‑bound, making system state diffable and attestable via a root hash, and isolating model inference at the kernel level. It targets OS researchers, security engineers and developers of AI‑intensive bare‑metal services.",
+  "when": "Reach for RESENTMENT when you need a deterministic, security‑focused kernel for AI workloads or when exploring capability‑based designs. The project is under active development (2023‑2026) with build scripts and Docker support, but it is not yet a production‑grade OS.",
   "stack": [
-   "Shell",
-   "Docker",
-   "Linux kernel",
-   "Build environment",
-   "Bash"
+   "C",
+   "capability security",
+   "Merkle DAG",
+   "AI scheduling",
+   "bare-metal",
+   "microkernel"
   ],
   "highlights": [
-   "Prints a custom message at boot",
-   "Docker image provides ready‑to‑use build env",
-   "Simple shell scripts for compilation",
-   "Minimal example for learning"
+   "Expiring capabilities sealed with time‑bound cryptographic MACs",
+   "System state represented as a hashable Merkle DAG",
+   "AI models, tensors and caches are first‑class kernel objects",
+   "Supports x86_64, ARM64 and RISC‑V from a single code base"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-18T06:40:24.732Z"
+  "at": "2026-08-28T16:38:47.782Z"
  },
  "RESENTMENT": {
   "sig": "2025-12-25T07:53:33Z||openai/gpt-oss-120b",
@@ -399,27 +400,27 @@
   "at": "2026-08-18T06:42:28.461Z"
  },
  "SHE": {
-  "sig": "2025-12-25T07:31:22Z|A Programming Language|openai/gpt-oss-120b",
-  "tagline": "Beginner-friendly interpreted language with simple syntax and built‑in encryption",
-  "what": "SHE is a custom programming language interpreted by a Python runtime. It provides a REPL and the ability to execute .she files, supporting arithmetic, variables, conditionals, loops, functions, strings, and lists. The interpreter also includes built‑in Kaalka encryption and decryption utilities.",
-  "why": "It targets learners and hobbyists who want an easy-to‑read language for teaching fundamentals or quick scripting. The integrated encryption functions let users experiment with simple data protection without external tools. Its minimalistic design lowers the barrier to entry compared to full‑featured languages.",
-  "when": "Reach for SHE when you need a lightweight, educational scripting environment or want to prototype algorithms with clear syntax. The core language features are stable, and the project has recent activity up to late 2025, though it remains a niche interpreter. Expect basic standard library functionality and community‑driven improvements.",
+  "sig": "2026-08-28T02:51:28Z|A programming language that reads like English — and can't touch your machine unless you say so. Capability sandbox, pattern matching, gradual types. pip install she-lang|openai/gpt-oss-120b",
+  "tagline": "English-like scripting with built-in capability sandbox",
+  "what": "SHE is a Python‑implemented programming language that reads like natural English sentences. It runs via a lightweight interpreter (`python -m she`) and can be installed from PyPI without any compilation step. The REPL and script runner let you execute `.she` files directly on any Python 3.9+ runtime.",
+  "why": "It targets the trade‑off between readability and safety that most languages force you to choose. By default a SHE program has no access to files, network or environment, and must request explicit capability flags. This makes it suitable for beginners, educators, and anyone needing sandboxed automation.",
+  "when": "Reach for SHE when you want a clear, English‑style script that cannot accidentally affect the host system—e.g., teaching programming concepts, rapid prototyping, or secure user‑provided scripts. The project is actively maintained (last push 2026) and works on standard Python installations, with optional crypto/web extras for advanced use.",
   "stack": [
    "Python",
-   "Interpreter",
-   "Educational",
-   "Scripting",
-   "Encryption",
-   "REPL"
+   "interpreter",
+   "sandbox",
+   "capability-security",
+   "pattern-matching",
+   "language-design"
   ],
   "highlights": [
-   "Simple syntax for arithmetic, variables, loops, functions",
-   "Built‑in Kaalka encryption/decryption functions",
-   "Run scripts with RUN command and view PRINT output",
-   "Test suite validates core language features"
+   "English‑sentence syntax, no braces or semicolons",
+   "Capability‑based sandbox: scripts start with no permissions",
+   "Gradual typing and pattern matching for safe code",
+   "Runs on any Python 3.9+, install via `pip install she‑lang`"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-18T06:42:50.518Z"
+  "at": "2026-08-28T16:39:04.610Z"
  },
  "Mailbook": {
   "sig": "2025-12-25T07:30:30Z|A JSP-JDBC-MySQL-Servlet based Java project to demonstrate CURD Operations where Users can create, update, edit and delete their name, email and country respectively. |openai/gpt-oss-120b",
@@ -1084,26 +1085,26 @@
   "at": "2026-08-18T06:49:40.520Z"
  },
  "Galiyaara": {
-  "sig": "2026-08-27T14:53:11Z|A photography portfolio you walk through instead of scroll — a moonlit 3D arcade rendered live in the browser. Drop a photo in a folder, push, and it's on the wall.|openai/gpt-oss-120b",
-  "tagline": "Walk through a moonlit 3D photo gallery in your browser",
-  "what": "Galiyaara is a vanilla‑JS web app that renders a virtual stone arcade using Three.js. Photographs placed in the photos/ folder are resized, indexed and displayed on the walls at build time via GitHub Actions, then served as a static site on GitHub Pages.",
-  "why": "Typical photo portfolios are flat grids; Galiyaara offers an immersive, walkable environment that lets viewers explore images as if in a real corridor. It’s aimed at photographers and creative coders who want a distinctive, code‑only showcase without third‑party gallery services.",
-  "when": "Use it when you need a memorable, interactive portfolio that can be deployed with a single push. The repo is actively maintained (last push 2026) and works out‑of‑the‑box with MIT‑licensed code and optional AI‑generated captions.",
+  "sig": "2026-08-28T16:01:42Z|A photography portfolio you walk through instead of scroll — a moonlit 3D arcade rendered live in the browser. Drop a photo in a folder, push, and it's on the wall.|openai/gpt-oss-120b",
+  "tagline": "Walk through a moonlit 3‑D gallery of your photos in the browser",
+  "what": "Galiyaara is a web‑based photography portfolio that renders a 3‑D stone arcade in the browser using three.js. Photographs placed in the repository are automatically resized, indexed and displayed on the walls, with optional AI‑generated titles and captions. The site is a static collection of files hosted on GitHub Pages.",
+  "why": "Typical photo sites show images in a flat grid, which limits immersion and requires external services. Galiyaara gives photographers an immersive, walkable experience that is self‑hosted and requires no backend. It is aimed at creators who want a unique, code‑light portfolio.",
+  "when": "Use it when you want a self‑hosted, interactive portfolio without a server or build framework. It works by simply adding images to the repo and pushing; GitHub Actions handles processing. The project is actively maintained (last push 2026) and released under MIT.",
   "stack": [
-   "threejs",
-   "webgl",
+   "JavaScript",
+   "three.js",
+   "WebGL",
+   "GitHub Pages",
    "vanilla-js",
-   "github-pages",
-   "static-site",
-   "ai‑curation"
+   "static-site"
   ],
   "highlights": [
-   "Moonlit 3D arcade rendered live with Three.js",
-   "GitHub Actions auto‑resize images and generate titles/tags",
-   "Keyboard, mouse and touch controls for walking or scrolling",
-   "MIT‑licensed, single‑page static site deployable via GitHub Pages"
+   "Moonlit 3‑D arcade rendered live with three.js",
+   "Add photos by dropping them in /photos and pushing",
+   "Optional AI adds titles, captions, tags during build",
+   "Keyboard, mouse, touch and pointer‑lock navigation"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-27T15:14:53.792Z"
+  "at": "2026-08-28T16:38:36.221Z"
  }
 }
