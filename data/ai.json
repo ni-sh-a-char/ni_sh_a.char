@@ -1,26 +1,26 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-08-27T15:15:04Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static org site with AI‑generated repo summaries",
-  "what": "A public website for the ni_sh_a.char organization built with plain HTML, CSS and JavaScript. It displays every public repository in the org, adding AI‑written descriptions of what each project does, why it exists, and when to use it. The site is served directly from GitHub Pages with no build step or framework.",
-  "why": "Maintaining up‑to‑date documentation for many repositories is time‑consuming; this site automates the overview using a daily GitHub Actions workflow and a free LLM. It helps visitors, contributors, and potential users quickly understand the org’s work without manual curation.",
-  "when": "Use it to browse the organization’s repo catalog or as a starter template for similar static org sites. The project is actively maintained, with daily data refreshes and live deployment on GitHub Pages.",
+  "sig": "2026-08-28T16:39:38Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static site auto‑listing org repos with AI‑written summaries",
+  "what": "A static website hosted on GitHub Pages that shows every public repository in the ni_sh_a.char organisation. It renders a pre‑generated data/repos.json file and makes a single unauthenticated GitHub API call to fetch newer repos. AI‑generated descriptions, purpose, and usage notes are displayed for each repository.",
+  "why": "Maintaining a manual list of an organisation’s projects is tedious and quickly becomes outdated. This site provides an always‑up‑to‑date overview with AI‑written summaries, helping developers, contributors, and visitors understand what each repo does and when to use it.",
+  "when": "Use it when you need a quick, browsable catalog of the organisation’s public projects without digging through GitHub. The site is production‑ready, refreshed daily by a GitHub Actions workflow, and works offline with cached data. It can also be run locally with a simple static file server for testing or development.",
   "stack": [
    "JavaScript",
    "HTML",
    "CSS",
    "GitHub Pages",
    "GitHub Actions",
-   "LLM API"
+   "LLM"
   ],
   "highlights": [
-   "Static site, no build step required",
-   "AI‑generated summaries refreshed daily",
-   "Fallback to cached data if GitHub API is rate‑limited",
-   "Configurable LLM via repository secrets (Groq or OpenRouter)"
+   "Static HTML/CSS/JS – no build step",
+   "Daily data refresh via GitHub Actions",
+   "AI‑generated repo summaries using Groq/OpenRouter",
+   "Works offline with cached JSON snapshot"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-28T16:39:35.504Z"
+  "at": "2026-08-29T11:06:22.102Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -400,27 +400,27 @@
   "at": "2026-08-18T06:42:28.461Z"
  },
  "SHE": {
-  "sig": "2026-08-28T02:51:28Z|A programming language that reads like English — and can't touch your machine unless you say so. Capability sandbox, pattern matching, gradual types. pip install she-lang|openai/gpt-oss-120b",
-  "tagline": "English-like scripting with built-in capability sandbox",
-  "what": "SHE is a Python‑implemented programming language that reads like natural English sentences. It runs via a lightweight interpreter (`python -m she`) and can be installed from PyPI without any compilation step. The REPL and script runner let you execute `.she` files directly on any Python 3.9+ runtime.",
-  "why": "It targets the trade‑off between readability and safety that most languages force you to choose. By default a SHE program has no access to files, network or environment, and must request explicit capability flags. This makes it suitable for beginners, educators, and anyone needing sandboxed automation.",
-  "when": "Reach for SHE when you want a clear, English‑style script that cannot accidentally affect the host system—e.g., teaching programming concepts, rapid prototyping, or secure user‑provided scripts. The project is actively maintained (last push 2026) and works on standard Python installations, with optional crypto/web extras for advanced use.",
+  "sig": "2026-08-28T17:38:13Z|A programming language that reads like English — and can't touch your machine unless you say so. Capability sandbox, pattern matching, gradual types. pip install she-lang|openai/gpt-oss-120b",
+  "tagline": "English-like scripting language with built-in capability sandbox",
+  "what": "SHE is an interpreted programming language written in Python that uses plain English syntax. Programs are run via the she command or python ‑m she on any Python 3.9+ runtime. The language includes pattern matching, gradual typing, modules and a REPL.",
+  "why": "It targets learners and developers who want readable code without sacrificing safety. By default a script has no access to files, sockets, processes or environment variables and must be granted explicit capabilities. Errors are phrased in plain language to aid education.",
+  "when": "Use SHE for quick, human‑readable scripts that need sandboxing, such as teaching, prototyping, or safe automation. The project is actively maintained (last push Aug 2026) and installable from PyPI with pip install she‑lang. It works out‑of‑the‑box on Python 3.9+, with optional crypto and web extras.",
   "stack": [
-   "Python",
+   "python",
    "interpreter",
-   "sandbox",
    "capability-security",
    "pattern-matching",
-   "language-design"
+   "gradual-typing",
+   "repl"
   ],
   "highlights": [
-   "English‑sentence syntax, no braces or semicolons",
-   "Capability‑based sandbox: scripts start with no permissions",
-   "Gradual typing and pattern matching for safe code",
-   "Runs on any Python 3.9+, install via `pip install she‑lang`"
+   "Plain English syntax, no braces or semicolons",
+   "Capability sandbox: scripts start with no permissions",
+   "Gradual runtime typing with optional type annotations",
+   "Built-in REPL, testing (she test) and pattern matching"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-28T16:39:04.610Z"
+  "at": "2026-08-29T11:05:49.937Z"
  },
  "Mailbook": {
   "sig": "2025-12-25T07:30:30Z|A JSP-JDBC-MySQL-Servlet based Java project to demonstrate CURD Operations where Users can create, update, edit and delete their name, email and country respectively. |openai/gpt-oss-120b",
@@ -1085,26 +1085,26 @@
   "at": "2026-08-18T06:49:40.520Z"
  },
  "Galiyaara": {
-  "sig": "2026-08-28T16:01:42Z|A photography portfolio you walk through instead of scroll — a moonlit 3D arcade rendered live in the browser. Drop a photo in a folder, push, and it's on the wall.|openai/gpt-oss-120b",
-  "tagline": "Walk through a moonlit 3‑D gallery of your photos in the browser",
-  "what": "Galiyaara is a web‑based photography portfolio that renders a 3‑D stone arcade in the browser using three.js. Photographs placed in the repository are automatically resized, indexed and displayed on the walls, with optional AI‑generated titles and captions. The site is a static collection of files hosted on GitHub Pages.",
-  "why": "Typical photo sites show images in a flat grid, which limits immersion and requires external services. Galiyaara gives photographers an immersive, walkable experience that is self‑hosted and requires no backend. It is aimed at creators who want a unique, code‑light portfolio.",
-  "when": "Use it when you want a self‑hosted, interactive portfolio without a server or build framework. It works by simply adding images to the repo and pushing; GitHub Actions handles processing. The project is actively maintained (last push 2026) and released under MIT.",
+  "sig": "2026-08-29T10:37:08Z|A photography portfolio you walk through instead of scroll — a moonlit 3D arcade rendered live in the browser. Drop a photo in a folder, push, and it's on the wall.|openai/gpt-oss-120b",
+  "tagline": "Walk through a moonlit 3D photo gallery in your browser",
+  "what": "Galiyaara is a static JavaScript site that renders a night‑lit stone arcade with photographs hanging on its walls. It uses three.js and WebGL to let visitors scroll or walk through the corridor, loading full‑resolution images on demand. The build runs in GitHub Actions, resizing images and creating a manifest without any external framework.",
+  "why": "Typical photography portfolios are flat grids that offer little context. Galiyaara gives photographers an immersive, narrative‑style showcase that runs entirely on GitHub Pages, avoiding third‑party gallery services. It’s aimed at creators who want a unique, self‑hosted web presence with minimal setup.",
+  "when": "Use it when you have a collection of images and want a live, walkable portfolio hosted on GitHub Pages. The repository has been maintained since 2022 and the latest push is recent (2026), so the core functionality is stable. You’ll need to fork, add your photos, and optionally configure an AI key for auto‑generated captions.",
   "stack": [
-   "JavaScript",
-   "three.js",
-   "WebGL",
-   "GitHub Pages",
+   "threejs",
    "vanilla-js",
-   "static-site"
+   "webgl",
+   "static-site",
+   "github-pages",
+   "creative-coding"
   ],
   "highlights": [
-   "Moonlit 3‑D arcade rendered live with three.js",
-   "Add photos by dropping them in /photos and pushing",
-   "Optional AI adds titles, captions, tags during build",
-   "Keyboard, mouse, touch and pointer‑lock navigation"
+   "No build framework – single hand‑authored HTML file",
+   "GitHub Actions auto‑resize images and generate metadata",
+   "Optional free AI adds titles, captions, and tags",
+   "Keyboard (WASD) and touch navigation with pointer lock"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-28T16:38:36.221Z"
+  "at": "2026-08-29T11:05:36.774Z"
  }
 }
