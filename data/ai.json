@@ -1,10 +1,10 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-08-28T16:39:38Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static site auto‑listing org repos with AI‑written summaries",
-  "what": "A static website hosted on GitHub Pages that shows every public repository in the ni_sh_a.char organisation. It renders a pre‑generated data/repos.json file and makes a single unauthenticated GitHub API call to fetch newer repos. AI‑generated descriptions, purpose, and usage notes are displayed for each repository.",
-  "why": "Maintaining a manual list of an organisation’s projects is tedious and quickly becomes outdated. This site provides an always‑up‑to‑date overview with AI‑written summaries, helping developers, contributors, and visitors understand what each repo does and when to use it.",
-  "when": "Use it when you need a quick, browsable catalog of the organisation’s public projects without digging through GitHub. The site is production‑ready, refreshed daily by a GitHub Actions workflow, and works offline with cached data. It can also be run locally with a simple static file server for testing or development.",
+  "sig": "2026-08-29T11:06:24Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Live AI‑enhanced catalog of the org’s public repos",
+  "what": "ni_sh_a.char is a static website hosted on GitHub Pages that lists every public repository in the ni_sh_a.char organization. It shows an AI‑written summary for each repo, loading data from a generated JSON file and optionally refreshing via the GitHub API.",
+  "why": "It provides an up‑to‑date overview of the organization’s projects without manual edits, helping developers, contributors, and interested visitors quickly understand each repository’s purpose.",
+  "when": "Use it when you need a quick overview of the org’s repos or want AI‑generated descriptions. The site is production‑ready and updates daily via a GitHub Actions workflow, and it still works offline with the last snapshot.",
   "stack": [
    "JavaScript",
    "HTML",
@@ -14,13 +14,13 @@
    "LLM"
   ],
   "highlights": [
-   "Static HTML/CSS/JS – no build step",
-   "Daily data refresh via GitHub Actions",
-   "AI‑generated repo summaries using Groq/OpenRouter",
-   "Works offline with cached JSON snapshot"
+   "Static HTML/CSS/JS with no build step",
+   "Daily GitHub Action regenerates data/repos.json",
+   "AI‑generated repo summaries via free LLM",
+   "Offline‑friendly: shows snapshot if API call fails"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-29T11:06:22.102Z"
+  "at": "2026-08-30T09:56:38.181Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -157,27 +157,27 @@
   "at": "2026-08-18T06:40:06.677Z"
  },
  "RESENTMENT---kernel": {
-  "sig": "2026-08-28T12:40:30Z|A capability-secure, AI-native kernel for x86_64, ARM64 and RISC-V. Authority expires, the system is a graph you can hash, and inference is a scheduling class.|openai/gpt-oss-120b",
-  "tagline": "Capability‑secure AI‑native microkernel for x86_64, ARM64 & RISC‑V",
-  "what": "RESENTMENT is a from‑scratch operating system kernel written in C that runs on x86_64, ARM64 and RISC‑V. It introduces expiring, cryptographically sealed capabilities and models the entire kernel state as a Merkle DAG. AI workloads are treated as native kernel objects with a dedicated scheduling class.",
-  "why": "Conventional kernels struggle with revocation, reproducible state and safe AI execution. RESENTMENT solves these by making authority time‑bound, making system state diffable and attestable via a root hash, and isolating model inference at the kernel level. It targets OS researchers, security engineers and developers of AI‑intensive bare‑metal services.",
-  "when": "Reach for RESENTMENT when you need a deterministic, security‑focused kernel for AI workloads or when exploring capability‑based designs. The project is under active development (2023‑2026) with build scripts and Docker support, but it is not yet a production‑grade OS.",
+  "sig": "2026-08-29T13:01:38Z|A capability-secure, AI-native kernel for x86_64, ARM64 and RISC-V. Authority expires, the system is a graph you can hash, and inference is a scheduling class.|openai/gpt-oss-120b",
+  "tagline": "Capability‑secure AI‑native microkernel for x86_64, ARM64 and RISC‑V",
+  "what": "RESENTMENT is a from‑scratch operating system kernel written in C that runs on x86_64, ARM64 and RISC‑V. It introduces expiring, cryptographically sealed capabilities, represents every kernel object as a node in a Merkle DAG, and treats AI models and tensors as a dedicated scheduling class. It is not a Unix clone and includes its own SHE‑based shell language.",
+  "why": "Conventional kernels struggle with timely revocation of permissions, deterministic state attestation, and efficient scheduling of AI workloads. RESENTMENT solves these by making authority time‑bound, making the entire machine state hashable for diffing and attestation, and exposing AI resources to the scheduler. It is aimed at OS researchers, security engineers, and developers building AI‑centric systems.",
+  "when": "Use RESENTMENT when you need a research platform for capability‑based security or deterministic system snapshots, or when integrating AI workloads at the kernel level. The project is actively maintained (last push 2026‑08‑29) and provides a portable toolchain and Docker image for building across supported architectures. It remains experimental and best suited for exploration and prototyping.",
   "stack": [
    "C",
-   "capability security",
-   "Merkle DAG",
-   "AI scheduling",
-   "bare-metal",
-   "microkernel"
+   "microkernel",
+   "capability-security",
+   "AI",
+   "Merkle-DAG",
+   "multi‑arch"
   ],
   "highlights": [
-   "Expiring capabilities sealed with time‑bound cryptographic MACs",
-   "System state represented as a hashable Merkle DAG",
-   "AI models, tensors and caches are first‑class kernel objects",
-   "Supports x86_64, ARM64 and RISC‑V from a single code base"
+   "Expiring capabilities sealed with Kaalka time‑driven encryption",
+   "System state expressed as a hashable Merkle DAG",
+   "AI models, tensors and caches are first‑class scheduling objects",
+   "Supports x86_64, ARM64 and RISC‑V with a single portable build toolchain"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-28T16:38:47.782Z"
+  "at": "2026-08-30T09:56:31.422Z"
  },
  "RESENTMENT": {
   "sig": "2025-12-25T07:53:33Z||openai/gpt-oss-120b",
