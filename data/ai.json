@@ -1,10 +1,10 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-08-31T10:51:29Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Live org website that auto‑lists repos with AI‑generated summaries",
-  "what": "A static website hosted on GitHub Pages that lists every public repository in the ni_sh_a.char organisation. It renders a pre‑generated data/repos.json file and makes a single unauthenticated GitHub API call to fetch newer repos. AI‑written summaries are added daily via a GitHub Actions workflow.",
-  "why": "Maintaining an up‑to‑date catalog of an organisation’s projects is tedious; this site automates the listing and description generation. It serves developers, contributors, and anyone interested in the org’s work without requiring manual edits.",
-  "when": "Use it whenever you need a quick overview of the organisation’s public repos or want AI‑crafted explanations of each project. The site is live, refreshed daily, and degrades gracefully offline using the cached snapshot.",
+  "sig": "2026-09-01T09:24:24Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static org site that auto‑lists repos with AI‑written summaries",
+  "what": "ni_sh_a.char is a public website for the ni_sh_a.char GitHub organization. It displays every public repository with an AI‑generated description, using only static HTML, CSS and JavaScript. Data is refreshed daily via a GitHub Actions workflow that calls a free LLM.",
+  "why": "It helps visitors quickly understand what each repo does without reading raw READMEs. The site is aimed at developers, contributors, and anyone interested in the organization’s work. By automating summaries, it reduces manual documentation effort.",
+  "when": "Use it when you need an overview of the organization’s projects, especially on GitHub Pages. The site is production‑ready and automatically updates, though the AI generation runs once per day. It works offline with the last generated snapshot.",
   "stack": [
    "JavaScript",
    "HTML",
@@ -14,13 +14,13 @@
    "LLM"
   ],
   "highlights": [
-   "Static HTML/CSS/JS, no build step",
-   "Auto‑updates repo list via GitHub API",
-   "AI‑generated project summaries refreshed daily",
-   "Works offline with cached snapshot"
+   "Static site, no build step or framework",
+   "AI‑generated repo summaries refreshed daily",
+   "Runs entirely on GitHub Pages, uses unauthenticated API calls",
+   "Filters out internal repos like monsterrr-* automatically"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-09-01T09:24:21.628Z"
+  "at": "2026-09-02T08:47:28.527Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -157,49 +157,49 @@
   "at": "2026-08-18T06:40:06.677Z"
  },
  "RESENTMENT---kernel": {
-  "sig": "2026-08-29T13:01:38Z|A capability-secure, AI-native kernel for x86_64, ARM64 and RISC-V. Authority expires, the system is a graph you can hash, and inference is a scheduling class.|openai/gpt-oss-120b",
-  "tagline": "Capability‑secure AI‑native microkernel for x86_64, ARM64 and RISC‑V",
-  "what": "RESENTMENT is a from‑scratch operating system kernel written in C that runs on x86_64, ARM64 and RISC‑V. It introduces expiring, cryptographically sealed capabilities, represents every kernel object as a node in a Merkle DAG, and treats AI models and tensors as a dedicated scheduling class. It is not a Unix clone and includes its own SHE‑based shell language.",
-  "why": "Conventional kernels struggle with timely revocation of permissions, deterministic state attestation, and efficient scheduling of AI workloads. RESENTMENT solves these by making authority time‑bound, making the entire machine state hashable for diffing and attestation, and exposing AI resources to the scheduler. It is aimed at OS researchers, security engineers, and developers building AI‑centric systems.",
-  "when": "Use RESENTMENT when you need a research platform for capability‑based security or deterministic system snapshots, or when integrating AI workloads at the kernel level. The project is actively maintained (last push 2026‑08‑29) and provides a portable toolchain and Docker image for building across supported architectures. It remains experimental and best suited for exploration and prototyping.",
+  "sig": "2026-09-02T08:37:57Z|A capability-secure, AI-native kernel for x86_64, ARM64 and RISC-V. Authority expires, the system is a graph you can hash, and inference is a scheduling class.|openai/gpt-oss-120b",
+  "tagline": "A capability‑secure, AI‑native microkernel with expiring authority",
+  "what": "RESENTMENT is a from‑scratch operating‑system kernel written in C for x86_64, ARM64 and RISC‑V. It implements expiring capabilities sealed with cryptographic timestamps, a Merkle‑DAG of kernel objects, and a dedicated scheduling class for AI inference workloads. The system includes a SHE‑based shell where programs start with no permissions.",
+  "why": "It targets developers needing strong, time‑bounded authority and verifiable system state, especially for AI workloads on bare‑metal platforms. Conventional kernels lack automatic capability revocation, deterministic state hashing, and safe preemption of model execution. RESENTMENT provides these guarantees without a Unix compatibility layer.",
+  "when": "Use it when building secure, deterministic AI‑centric systems or researching capability‑based OS designs. The kernel is still early‑stage experimental (first release 2023, active development as of 2026) and runs under QEMU or on real hardware with a provided toolchain.",
   "stack": [
    "C",
    "microkernel",
    "capability-security",
-   "AI",
+   "AI-native",
    "Merkle-DAG",
-   "multi‑arch"
+   "bare-metal"
   ],
   "highlights": [
    "Expiring capabilities sealed with Kaalka time‑driven encryption",
-   "System state expressed as a hashable Merkle DAG",
-   "AI models, tensors and caches are first‑class scheduling objects",
-   "Supports x86_64, ARM64 and RISC‑V with a single portable build toolchain"
+   "Whole system represented as a hashable Merkle DAG",
+   "Built‑in scheduling class for models, tensors and attention caches",
+   "SHE language shell enforces zero‑permission defaults"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-30T09:56:31.422Z"
+  "at": "2026-09-02T08:46:56.411Z"
  },
  "RESENTMENT": {
-  "sig": "2025-12-25T07:53:33Z||openai/gpt-oss-120b",
-  "tagline": "A C‑based Linux distribution for low‑level OS enthusiasts",
-  "what": "Resentment is a Linux distribution project written primarily in C. It provides the source code and build scripts needed to assemble a custom Linux system.",
-  "why": "It aims to give developers control over the low‑level components of a Linux distro, avoiding heavyweight abstractions. It is intended for OS hobbyists and engineers who want to build or study a minimalist system.",
-  "when": "Use it when you need a lightweight, C‑centric Linux base or want to experiment with distro construction. The project has been active since 2023 with recent updates as of Dec 2025, but remains early‑stage.",
+  "sig": "2026-09-02T08:38:42Z||openai/gpt-oss-120b",
+  "tagline": "A custom Linux distribution built in C",
+  "what": "Resentment is a source‑tree for a Linux distribution written primarily in C. It bundles kernel configuration, bootloader setup and a minimal set of user‑space utilities to produce a bootable system. The repository contains the build scripts and package definitions needed to assemble the distro.",
+  "why": "It targets developers and hobbyists who want a lightweight, orthodoxy‑focused Linux that they can compile and customize themselves. The project fills the niche of a from‑scratch distro without the overhead of larger, pre‑packaged systems.",
+  "when": "Reach for Resentment when you want to experiment with building a Linux system from the ground up or need a minimal base for embedded projects. The code is actively maintained (last push Sep 2026) but remains a work‑in‑progress with limited documentation.",
   "stack": [
    "C",
    "Linux kernel",
-   "POSIX",
-   "Makefiles",
-   "Bootloader"
+   "Bootloader",
+   "Init system",
+   "POSIX"
   ],
   "highlights": [
-   "Source code primarily in C",
-   "Build scripts for assembling a distro",
-   "Active development with recent commits",
-   "Targeted at low‑level OS developers"
+   "All core components are written in C",
+   "Provides scripts to assemble a bootable system",
+   "Designed for minimal, orthodox Linux setups",
+   "Active development with recent commits"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-18T06:40:32.283Z"
+  "at": "2026-09-02T08:46:51.795Z"
  },
  "NATRAJ": {
   "sig": "2025-12-25T07:52:37Z|NATRAJ - A localized End to End encrypted server with Neural Networks to act as a packet filtering firewall and accessing the internet using proxy for actual device ID masking.|openai/gpt-oss-120b",
