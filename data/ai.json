@@ -1,10 +1,10 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-09-01T09:24:24Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static org site that auto‑lists repos with AI‑written summaries",
-  "what": "ni_sh_a.char is a public website for the ni_sh_a.char GitHub organization. It displays every public repository with an AI‑generated description, using only static HTML, CSS and JavaScript. Data is refreshed daily via a GitHub Actions workflow that calls a free LLM.",
-  "why": "It helps visitors quickly understand what each repo does without reading raw READMEs. The site is aimed at developers, contributors, and anyone interested in the organization’s work. By automating summaries, it reduces manual documentation effort.",
-  "when": "Use it when you need an overview of the organization’s projects, especially on GitHub Pages. The site is production‑ready and automatically updates, though the AI generation runs once per day. It works offline with the last generated snapshot.",
+  "sig": "2026-09-02T08:47:30Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static AI‑enhanced org site on GitHub Pages",
+  "what": "A plain‑HTML/CSS/JavaScript site that lists every public repository in the ni_sh_a.char organization. It renders a pre‑generated data/repos.json file and optionally fetches fresh repo info from the GitHub API. AI‑written summaries are added automatically by a daily GitHub Actions workflow.",
+  "why": "Maintaining an up‑to‑date catalog of an organization’s projects is tedious and error‑prone. This site provides developers, contributors, and visitors with a single, always‑current overview without manual edits. It’s aimed at anyone needing quick insight into the org’s work.",
+  "when": "Use it whenever you need to browse the organization’s repos, either via the live GitHub Pages site or a local copy. The site is production‑ready, with daily regeneration and offline fallback. Development continues through the refresh‑data workflow.",
   "stack": [
    "JavaScript",
    "HTML",
@@ -14,13 +14,13 @@
    "LLM"
   ],
   "highlights": [
-   "Static site, no build step or framework",
-   "AI‑generated repo summaries refreshed daily",
-   "Runs entirely on GitHub Pages, uses unauthenticated API calls",
-   "Filters out internal repos like monsterrr-* automatically"
+   "AI‑generated summaries for each repo",
+   "Zero‑framework static site, no build step",
+   "Daily data refresh via GitHub Actions workflow",
+   "Falls back to cached JSON if API limited or offline"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-09-02T08:47:28.527Z"
+  "at": "2026-09-03T08:56:18.430Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -180,26 +180,27 @@
   "at": "2026-09-02T08:46:56.411Z"
  },
  "RESENTMENT": {
-  "sig": "2026-09-02T08:38:42Z||openai/gpt-oss-120b",
-  "tagline": "A custom Linux distribution built in C",
-  "what": "Resentment is a source‑tree for a Linux distribution written primarily in C. It bundles kernel configuration, bootloader setup and a minimal set of user‑space utilities to produce a bootable system. The repository contains the build scripts and package definitions needed to assemble the distro.",
-  "why": "It targets developers and hobbyists who want a lightweight, orthodoxy‑focused Linux that they can compile and customize themselves. The project fills the niche of a from‑scratch distro without the overhead of larger, pre‑packaged systems.",
-  "when": "Reach for Resentment when you want to experiment with building a Linux system from the ground up or need a minimal base for embedded projects. The code is actively maintained (last push Sep 2026) but remains a work‑in‑progress with limited documentation.",
+  "sig": "2026-09-02T13:36:51Z|An AI operating system on its own kernel and your own key. Authority expires, the system is one hash, agents are processes. Any provider, no server.|openai/gpt-oss-120b",
+  "tagline": "A browser‑based AI OS with capability‑secure kernel and bring‑your‑own‑key",
+  "what": "RESENTMENT is a progressive web app that provides a desktop‑style interface powered by AI agents. It runs entirely in the browser, connects to any LLM provider via a user‑supplied API key, and communicates with a capability‑secure kernel over a WebSocket bridge.",
+  "why": "It addresses the need for a local‑first, privacy‑preserving AI environment where permissions are time‑bound and auditable. Designed for developers, researchers, and power users who want AI assistance without a central server.",
+  "when": "Use it when you want an AI‑augmented workspace that runs offline or in a secure browser session. The desktop is functional and the kernel boots on x86_64 in CI; ARM64 and RISC‑V builds are available but not yet fully tested.",
   "stack": [
-   "C",
-   "Linux kernel",
-   "Bootloader",
-   "Init system",
-   "POSIX"
+   "HTML",
+   "JavaScript",
+   "PWA",
+   "Capability‑Security",
+   "Merkle‑DAG",
+   "AI‑Native Kernel"
   ],
   "highlights": [
-   "All core components are written in C",
-   "Provides scripts to assemble a bootable system",
-   "Designed for minimal, orthodox Linux setups",
-   "Active development with recent commits"
+   "Browser‑only UI; no code leaves the client except LLM requests",
+   "Time‑limited capability leases with automatic expiry",
+   "Whole system state represented as a single SHA‑256 Merkle root",
+   "Supports Anthropic, OpenAI, Gemini, Ollama and other OpenAI‑compatible APIs"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-09-02T08:46:51.795Z"
+  "at": "2026-09-03T08:56:14.895Z"
  },
  "NATRAJ": {
   "sig": "2025-12-25T07:52:37Z|NATRAJ - A localized End to End encrypted server with Neural Networks to act as a packet filtering firewall and accessing the internet using proxy for actual device ID masking.|openai/gpt-oss-120b",
@@ -378,26 +379,27 @@
   "at": "2026-08-18T06:42:17.141Z"
  },
  "ni_sh_a.char-IDE": {
-  "sig": "2025-12-25T07:33:47Z|A simple IDE to execute Python codes|openai/gpt-oss-120b",
-  "tagline": "Lightweight Python IDE with run button and syntax highlighting",
-  "what": "ni_sh_a.char-IDE is a minimal graphical IDE that lets you write, edit, and execute Python scripts. It provides a simple editor with syntax highlighting and basic clipboard and undo/redo actions.",
-  "why": "It targets users who need a quick, no‑frills environment to test Python snippets without leaving the terminal or opening a full‑featured IDE. Ideal for learners, hobbyists, or quick prototyping.",
-  "when": "Use it when you want to run short Python programs on a system with only Python installed. The project is actively maintained as of its last push in late 2025, but remains a basic tool without advanced features.",
+  "sig": "2026-09-02T16:06:27Z|Run any language, anywhere. A polyglot execution engine, standalone IDE, and one-line embeddable web component. 62 languages, three of them running in your browser with no backend at all.|openai/gpt-oss-120b",
+  "tagline": "Run any language anywhere with a browser‑based IDE and embeddable component",
+  "what": "ni_sh_a.char‑IDE is a polyglot execution engine that ships as a full‑screen browser IDE, a native Web Component, and a Python/JS/Docker library. It supports 62 languages, running three of them (Python, SHE, JavaScript/TypeScript) directly in the browser via WebAssembly, while others run locally or in a Docker sandbox.",
+  "why": "Typical online IDEs depend on central servers that can become costly or disappear. This project inverts that model so code executes on the user’s own hardware—browser tab, local machine, or isolated container—eliminating backend dependencies and associated fees.",
+  "when": "Choose this when you need a language‑agnostic playground that works offline, can be embedded in any web page, or must run safely in a container without provisioning servers. The project is actively maintained (last commit Sep 2026) and released under Apache‑2.0 with pip, npm, Maven, Docker and Flutter packages.",
   "stack": [
+   "WebAssembly",
+   "JavaScript",
    "Python",
-   "Shell scripts",
-   "Tkinter (GUI)",
-   "Syntax highlighting",
-   "MIT License"
+   "Docker",
+   "Web‑Component",
+   "CodeMirror"
   ],
   "highlights": [
-   "Simple editor with syntax highlighting",
-   "Run button executes code and shows output",
-   "Basic edit actions: copy, paste, undo/redo",
-   "Runs on any system with Python installed"
+   "62 languages available via single JSON definitions",
+   "Runs in the browser with no backend required",
+   "One‑line <nishachar‑ide> tag works in React, Vue, Svelte, etc.",
+   "Three execution tiers: browser, local toolchain, Docker container"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-18T06:42:28.461Z"
+  "at": "2026-09-03T08:56:11.067Z"
  },
  "SHE": {
   "sig": "2026-08-28T17:38:13Z|A programming language that reads like English — and can't touch your machine unless you say so. Capability sandbox, pattern matching, gradual types. pip install she-lang|openai/gpt-oss-120b",
