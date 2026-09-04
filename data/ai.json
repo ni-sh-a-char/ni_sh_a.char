@@ -1,10 +1,10 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-09-02T08:47:30Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static AI‑enhanced org site on GitHub Pages",
-  "what": "A plain‑HTML/CSS/JavaScript site that lists every public repository in the ni_sh_a.char organization. It renders a pre‑generated data/repos.json file and optionally fetches fresh repo info from the GitHub API. AI‑written summaries are added automatically by a daily GitHub Actions workflow.",
-  "why": "Maintaining an up‑to‑date catalog of an organization’s projects is tedious and error‑prone. This site provides developers, contributors, and visitors with a single, always‑current overview without manual edits. It’s aimed at anyone needing quick insight into the org’s work.",
-  "when": "Use it whenever you need to browse the organization’s repos, either via the live GitHub Pages site or a local copy. The site is production‑ready, with daily regeneration and offline fallback. Development continues through the refresh‑data workflow.",
+  "sig": "2026-09-03T08:56:20Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static org site auto‑listing repos with AI‑generated summaries",
+  "what": "A static website hosted on GitHub Pages that shows every public repository of the ni_sh_a.char organisation. It renders a pre‑generated JSON file and then fetches the GitHub API for any new repos, displaying AI‑written breakdowns. The site is built with plain HTML, CSS and JavaScript, without any framework or bundler.",
+  "why": "Maintaining a manual catalog of an organisation’s projects is error‑prone and labor‑intensive. This site provides an always‑up‑to‑date overview for developers, contributors, and anyone interested in the org’s work, using AI to generate concise descriptions automatically.",
+  "when": "Use it whenever you need a quick overview of the organisation’s public repositories, such as during onboarding or when scouting projects. The site is live and production‑ready, with daily data refreshes via GitHub Actions.",
   "stack": [
    "JavaScript",
    "HTML",
@@ -14,13 +14,13 @@
    "LLM"
   ],
   "highlights": [
-   "AI‑generated summaries for each repo",
-   "Zero‑framework static site, no build step",
-   "Daily data refresh via GitHub Actions workflow",
-   "Falls back to cached JSON if API limited or offline"
+   "Pure static files – no build step or framework",
+   "Daily GitHub Action regenerates repo list and AI summaries",
+   "Falls back to cached data if API rate‑limited or offline",
+   "Automatically filters internal repos (monsterrr-*, .github)"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-09-03T08:56:18.430Z"
+  "at": "2026-09-04T08:50:49.105Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -157,27 +157,26 @@
   "at": "2026-08-18T06:40:06.677Z"
  },
  "RESENTMENT---kernel": {
-  "sig": "2026-09-02T08:37:57Z|A capability-secure, AI-native kernel for x86_64, ARM64 and RISC-V. Authority expires, the system is a graph you can hash, and inference is a scheduling class.|openai/gpt-oss-120b",
-  "tagline": "A capability‑secure, AI‑native microkernel with expiring authority",
-  "what": "RESENTMENT is a from‑scratch operating‑system kernel written in C for x86_64, ARM64 and RISC‑V. It implements expiring capabilities sealed with cryptographic timestamps, a Merkle‑DAG of kernel objects, and a dedicated scheduling class for AI inference workloads. The system includes a SHE‑based shell where programs start with no permissions.",
-  "why": "It targets developers needing strong, time‑bounded authority and verifiable system state, especially for AI workloads on bare‑metal platforms. Conventional kernels lack automatic capability revocation, deterministic state hashing, and safe preemption of model execution. RESENTMENT provides these guarantees without a Unix compatibility layer.",
-  "when": "Use it when building secure, deterministic AI‑centric systems or researching capability‑based OS designs. The kernel is still early‑stage experimental (first release 2023, active development as of 2026) and runs under QEMU or on real hardware with a provided toolchain.",
+  "sig": "2026-09-03T09:54:04Z|A capability-secure, AI-native kernel for x86_64, ARM64 and RISC-V. Authority expires, the system is a graph you can hash, and inference is a scheduling class.|openai/gpt-oss-120b",
+  "tagline": "Capability‑secure AI‑native microkernel for x86_64, ARM64 and RISC‑V",
+  "what": "RES­ENTMENT is a from‑scratch operating‑system kernel written in C that runs on x86_64, ARM64 and RISC‑V. It abandons the Unix model in favour of expiring, cryptographically sealed capabilities and a Merkle‑DAG representation of all kernel objects. AI models, tensors and attention caches are native kernel objects with their own scheduling class.",
+  "why": "Conventional kernels lack fine‑grained, time‑bound authority and deterministic system state, making secure AI workloads hard to isolate. RES­ENTMENT provides automatic capability expiry, cryptographic attestation of system state, and preemptable AI inference as a kernel resource. It targets OS developers and security‑focused AI engineers who need provable isolation and replayable state.",
+  "when": "Use RES­ENTMENT when building bare‑metal or embedded platforms that require capability‑based security and deterministic AI execution. The project is actively developed (last push Sep 2026) but remains a research‑grade prototype, not yet suited for production deployment. It can be built with the provided portable toolchain or Docker image.",
   "stack": [
    "C",
    "microkernel",
    "capability-security",
    "AI-native",
-   "Merkle-DAG",
    "bare-metal"
   ],
   "highlights": [
    "Expiring capabilities sealed with Kaalka time‑driven encryption",
-   "Whole system represented as a hashable Merkle DAG",
-   "Built‑in scheduling class for models, tensors and attention caches",
-   "SHE language shell enforces zero‑permission defaults"
+   "Global Merkle DAG gives a single SHA‑256 root hash for system state",
+   "AI models, tensors and caches are first‑class kernel objects",
+   "Supports x86_64, ARM64 and RISC‑V; build via toolchain or Docker"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-09-02T08:46:56.411Z"
+  "at": "2026-09-04T08:50:42.206Z"
  },
  "RESENTMENT": {
   "sig": "2026-09-02T13:36:51Z|An AI operating system on its own kernel and your own key. Authority expires, the system is one hash, agents are processes. Any provider, no server.|openai/gpt-oss-120b",
@@ -1087,26 +1086,26 @@
   "at": "2026-08-18T06:49:40.520Z"
  },
  "Galiyaara": {
-  "sig": "2026-08-29T10:37:08Z|A photography portfolio you walk through instead of scroll — a moonlit 3D arcade rendered live in the browser. Drop a photo in a folder, push, and it's on the wall.|openai/gpt-oss-120b",
+  "sig": "2026-09-03T09:46:19Z|A photography portfolio you walk through instead of scroll — a moonlit 3D arcade rendered live in the browser. Drop a photo in a folder, push, and it's on the wall.|openai/gpt-oss-120b",
   "tagline": "Walk through a moonlit 3D photo gallery in your browser",
-  "what": "Galiyaara is a static JavaScript site that renders a night‑lit stone arcade with photographs hanging on its walls. It uses three.js and WebGL to let visitors scroll or walk through the corridor, loading full‑resolution images on demand. The build runs in GitHub Actions, resizing images and creating a manifest without any external framework.",
-  "why": "Typical photography portfolios are flat grids that offer little context. Galiyaara gives photographers an immersive, narrative‑style showcase that runs entirely on GitHub Pages, avoiding third‑party gallery services. It’s aimed at creators who want a unique, self‑hosted web presence with minimal setup.",
-  "when": "Use it when you have a collection of images and want a live, walkable portfolio hosted on GitHub Pages. The repository has been maintained since 2022 and the latest push is recent (2026), so the core functionality is stable. You’ll need to fork, add your photos, and optionally configure an AI key for auto‑generated captions.",
+  "what": "Galiyaara is a static website that renders a photography portfolio as a walkable 3‑D arcade corridor. It uses three.js and vanilla JavaScript, with no build framework—just a single HTML file and assets. Adding images to the photos folder triggers a GitHub Actions build that resizes them and generates a manifest.",
+  "why": "Typical photo sites show grids; Galiyaara turns a collection into an immersive space where each picture hangs on a virtual wall. It’s aimed at photographers or creators who want a distinctive, self‑hosted showcase without third‑party gallery services.",
+  "when": "Reach for it when you need a simple, GitHub‑Pages‑hosted portfolio that feels like a walk‑through exhibition. The repo is actively maintained (last push 2026) and ready to be forked and customized immediately.",
   "stack": [
    "threejs",
    "vanilla-js",
    "webgl",
-   "static-site",
    "github-pages",
-   "creative-coding"
+   "static-site",
+   "github-actions"
   ],
   "highlights": [
-   "No build framework – single hand‑authored HTML file",
-   "GitHub Actions auto‑resize images and generate metadata",
-   "Optional free AI adds titles, captions, and tags",
-   "Keyboard (WASD) and touch navigation with pointer lock"
+   "No framework – single hand‑authored HTML file",
+   "GitHub Actions auto‑resize images and generate captions",
+   "Keyboard, mouse, and touch navigation (WASD, drag, thumbstick)",
+   "AI model writes titles, captions, alt text at build time"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-08-29T11:05:36.774Z"
+  "at": "2026-09-04T08:50:45.513Z"
  }
 }
