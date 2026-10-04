@@ -1,10 +1,10 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-10-02T10:30:25Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static site that auto‑lists org repos with AI‑generated summaries",
-  "what": "A GitHub‑Pages‑hosted static website that shows every public repository of the ni_sh_a.char organization. It displays AI‑written breakdowns of each project’s purpose and usage. The site is pure HTML, CSS and JavaScript with no build step.",
-  "why": "Keeping an up‑to‑date catalog of many repositories is tedious; this site automates listing and summarising using a daily GitHub Action that calls a free LLM. It’s useful for org members, contributors, and anyone browsing the organization’s work.",
-  "when": "Open the site when you need a quick overview of the org’s public projects without visiting each repo. The project is actively maintained with daily data refreshes and works offline with cached data. It’s ready to fork for similar organisational dashboards.",
+  "sig": "2026-10-03T09:52:04Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Live AI‑generated catalog of the ni_sh_a.char organization",
+  "what": "ni_sh_a.char is a static website that lists every public repository in the ni_sh_a.char GitHub organization. It displays AI‑written summaries for each repo, pulling data from a generated JSON file and a fallback GitHub API call.",
+  "why": "It helps visitors quickly understand what each project does without reading raw READMEs, and aids the organization in showcasing its work. Intended for developers, contributors, and anyone browsing the org’s public code.",
+  "when": "Use it when you need an overview of the organization’s repos or want up‑to‑date AI summaries. The site is production‑ready on GitHub Pages, with daily data refreshes via GitHub Actions.",
   "stack": [
    "JavaScript",
    "HTML",
@@ -14,13 +14,13 @@
    "LLM API"
   ],
   "highlights": [
-   "No build step; pure static files served directly",
-   "Daily GitHub Action regenerates repos.json with AI summaries",
-   "Falls back to cached data if API rate‑limited or offline",
-   "Configurable to use any OpenAI‑compatible LLM via secrets"
+   "No framework or build step; pure static assets",
+   "Daily GitHub Actions workflow regenerates repos.json",
+   "AI summaries generated via free LLM calls, API key kept secret",
+   "Offline fallback uses cached snapshot if API rate‑limited"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-10-03T09:52:01.473Z"
+  "at": "2026-10-04T10:34:50.384Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
