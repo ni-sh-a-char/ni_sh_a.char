@@ -1,10 +1,10 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-10-23T09:20:32Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static org site with AI‑generated repo summaries",
-  "what": "A static website hosted on GitHub Pages that lists every public repository in the ni_sh_a.char organisation. It displays AI‑written breakdowns of each project’s purpose, usage and relevance. The page loads a pre‑generated data/repos.json and optionally fetches fresh data from the GitHub API.",
-  "why": "It gives visitors a single, searchable overview of the organisation’s work, saving time compared to browsing each repo individually. The AI summaries help newcomers quickly understand what each repository does. It is aimed at developers, contributors, and anyone interested in the org’s projects.",
-  "when": "Use it when you need a quick snapshot of all public repos in the organisation, especially when offline or when GitHub API rate limits apply. The site is live and automatically updates daily via a GitHub Actions workflow. It is production‑ready and requires no build step.",
+  "sig": "2026-10-24T08:52:32Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static site auto‑listing org repos with AI‑generated summaries",
+  "what": "The public website for the ni_sh_a.char organization, built with plain HTML, CSS and JavaScript. It displays every public repository in the org together with an AI‑written description, purpose and usage guidance. The data is loaded from a static JSON file and refreshed via a GitHub Actions workflow.",
+  "why": "Maintaining a manual catalog of projects is tedious and quickly becomes outdated. This site provides an always‑current, low‑maintenance overview for developers, contributors, and anyone interested in the organization’s work. It leverages a free LLM to generate concise summaries automatically.",
+  "when": "Use it whenever you need a quick overview of the organization’s public repos, such as onboarding new contributors or exploring available tools. The site is live on GitHub Pages and the data is regenerated daily, with a fallback snapshot for offline or rate‑limited scenarios. It is production‑ready but still open to contributions.",
   "stack": [
    "JavaScript",
    "HTML",
@@ -14,13 +14,13 @@
    "LLM"
   ],
   "highlights": [
-   "Zero‑build static site served directly from GitHub Pages",
-   "AI‑generated repo summaries refreshed daily via GitHub Actions",
-   "Works offline using cached repos.json snapshot",
-   "Filters out internal repos like monsterrr-* automatically"
+   "No framework or build step – pure static files served by GitHub Pages",
+   "Daily GitHub Action regenerates data/repos.json with AI summaries",
+   "Unauthenticated GitHub API call adds new repos; offline fallback works",
+   "Filters out monsterrr-* and .github meta repos automatically"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-10-24T08:52:29.708Z"
+  "at": "2026-10-25T09:09:00.533Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
