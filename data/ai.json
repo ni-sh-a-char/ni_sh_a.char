@@ -1,26 +1,26 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-10-31T10:23:12Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Live AI‑enhanced catalog of the ni_sh_a.char organization",
-  "what": "ni_sh_a.char is a static website that lists every public repository in the ni_sh_a.char GitHub organization. It shows AI‑written summaries describing each project, its purpose, and when to use it.",
-  "why": "It lets developers and newcomers quickly grasp what each repo does without reading raw READMEs. Ideal for anyone exploring the organization’s work or deciding where to contribute.",
-  "when": "Open the site when you need an overview of the org’s projects or AI‑generated insights. The site is live on GitHub Pages and refreshed daily via GitHub Actions, ready for production use.",
+  "sig": "2026-11-01T11:16:11Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "AI‑enhanced static site that lists every public repo in the org",
+  "what": "A GitHub‑Pages‑hosted static website that displays all public repositories of the ni_sh_a.char organisation. It renders a pre‑generated data/repos.json file and, if possible, fetches the latest repos via an unauthenticated GitHub API call. Summaries are written by a free LLM and refreshed daily through a GitHub Actions workflow.",
+  "why": "Keeping an up‑to‑date catalogue of an organisation’s projects is tedious when done manually. This site automates the process, providing visitors with concise, AI‑generated explanations of each repo, helping contributors, users, and newcomers quickly understand the codebase landscape.",
+  "when": "Use it whenever you need a quick overview of the organisation’s public projects—on the live site or locally for testing. The site is production‑ready, with daily data refreshes, but relies on free LLM and GitHub API rate limits, so occasional stale data may appear if limits are hit.",
   "stack": [
    "JavaScript",
    "HTML",
    "CSS",
    "GitHub Pages",
    "GitHub Actions",
-   "LLM integration"
+   "LLM"
   ],
   "highlights": [
-   "AI‑generated repo descriptions updated daily",
-   "No framework or build step – pure static files",
-   "Falls back to cached data if GitHub API is rate‑limited",
-   "Filters out internal repos like monsterrr-* automatically"
+   "Static HTML/CSS/JS, no build step",
+   "AI‑generated repo summaries refreshed daily",
+   "Automatic inclusion of new repos via GitHub API",
+   "Runs entirely on GitHub Pages, no server required"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-11-01T11:16:09.185Z"
+  "at": "2026-11-02T12:23:38.351Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
@@ -378,27 +378,27 @@
   "at": "2026-08-18T06:42:17.141Z"
  },
  "ni_sh_a.char-IDE": {
-  "sig": "2026-10-01T15:11:21Z|Run any language, anywhere. A polyglot execution engine, standalone IDE, and one-line embeddable web component. 62 languages, three of them running in your browser with no backend at all.|openai/gpt-oss-120b",
-  "tagline": "Run 62 languages anywhere—browser, local, or Docker",
-  "what": "ni_sh_a.char-IDE is a polyglot execution engine that ships as a full‑screen web IDE, a native Web Component, and a Python/JS library. It bundles 62 language definitions and can execute code in the browser via WebAssembly, on the host machine via installed toolchains, or inside a Docker container. The same interface auto‑selects the appropriate runtime.",
-  "why": "Typical online IDEs send code to remote servers, incurring cost, latency, and reliance on third‑party uptime. This project flips that model so code runs on the user’s own hardware—browser tab, local machine, or isolated Docker—eliminating backend dependencies and billing. It targets developers who need a trustworthy, offline‑first code runner across many languages.",
-  "when": "Reach for it when you need to embed a runnable code sandbox in a website, prototype in many languages without installing each compiler, or provide a consistent IDE for teaching or demos. The project is production‑ready, actively maintained since 2022, and released under Apache‑2.0. It works out‑of‑the‑box via npm, pip, Docker, or a single HTML tag.",
+  "sig": "2026-11-01T15:08:37Z|Run any language, anywhere. A polyglot execution engine, standalone IDE, and one-line embeddable web component. 62 languages, three of them running in your browser with no backend at all.|openai/gpt-oss-120b",
+  "tagline": "Run 62 languages anywhere—browser, local or Docker—in one IDE",
+  "what": "ni_sh_a.char‑IDE is a polyglot execution engine that ships as a full‑screen browser IDE, a native Web Component, and a command‑line/library package. It bundles support for 62 languages and can run code in the visitor’s browser (WebAssembly), on the local machine via installed toolchains, or inside a locked‑down Docker container. The same language registry is compiled into every distribution, so language lookup works offline.",
+  "why": "Typical online IDEs send code to remote servers, incurring cost, latency and reliance on third‑party uptime. This project inverts that model: code runs on hardware the user already controls—either the browser, their own machine, or a self‑hosted container—eliminating central runners and associated fees. It also lowers the barrier to contribute new languages, which are defined as simple JSON files.",
+  "when": "Reach for ni_sh_a.char‑IDE when you need a multi‑language playground without installing dozens of compilers, when you want to embed an instant code runner in a web page, or when you require a self‑hosted IDE that can fall back to Docker for missing toolchains. The project has been actively maintained since 2022 and ships ready‑to‑use packages for pip, npm, Dart, Maven/Gradle and Docker.",
   "stack": [
-   "webassembly",
-   "codemirror",
-   "web-component",
-   "docker",
-   "python",
-   "javascript"
+   "WebAssembly",
+   "WebComponent",
+   "CodeMirror",
+   "Docker",
+   "Python",
+   "JavaScript"
   ],
   "highlights": [
-   "62 language runtimes defined as JSON files",
-   "Runs Python, JavaScript, TypeScript, SHE in-browser without a server",
-   "One‑line <nishachar-ide> tag works in React, Vue, Svelte, etc.",
-   "Auto‑selects local toolchain, Docker, or WASM per language"
+   "62 languages supported out of the box",
+   "Runs in the browser with no backend",
+   "One‑line embeddable <nishachar-ide> tag",
+   "Add a new language with an 8‑line JSON PR"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-10-02T10:30:19.944Z"
+  "at": "2026-11-02T12:23:34.446Z"
  },
  "SHE": {
   "sig": "2026-08-28T17:38:13Z|A programming language that reads like English — and can't touch your machine unless you say so. Capability sandbox, pattern matching, gradual types. pip install she-lang|openai/gpt-oss-120b",
