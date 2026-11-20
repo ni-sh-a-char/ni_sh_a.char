@@ -1,26 +1,26 @@
 {
  "ni_sh_a.char": {
-  "sig": "2026-11-18T13:01:48Z|Website for the organization|openai/gpt-oss-120b",
-  "tagline": "Static org site with AI‑generated repo summaries",
-  "what": "A static website hosted on GitHub Pages that lists every public repository in the ni_sh_a.char organisation. It displays AI‑written breakdowns of each project’s purpose, relevance, and usage. The data is pre‑generated daily into data/repos.json and refreshed at runtime with a single unauthenticated GitHub API call.",
-  "why": "Maintaining an up‑to‑date catalogue of an organisation’s repos is tedious and error‑prone. This site automates the process, providing visitors and contributors with concise, AI‑crafted summaries without manual edits. It’s aimed at anyone browsing the organisation’s work, from potential collaborators to internal stakeholders.",
-  "when": "Use it whenever you need a quick overview of the organisation’s projects, especially when you want AI‑generated context. The site is live, automatically refreshed each day via GitHub Actions, and falls back to the cached snapshot if the API is rate‑limited or the user is offline. It is production‑ready and continuously maintained.",
+  "sig": "2026-11-19T13:05:24Z|Website for the organization|openai/gpt-oss-120b",
+  "tagline": "Static org site that auto‑lists repos with AI‑generated summaries",
+  "what": "A public website for the ni_sh_a.char organization built with plain HTML, CSS and JavaScript. It reads a pre‑generated data/repos.json file and optionally makes a single unauthenticated GitHub API request to show the latest public repositories. Each repo is displayed with an AI‑written description, purpose and usage guidance.",
+  "why": "Maintaining a manual catalog of an organization’s projects is tedious and quickly becomes outdated. This site provides an always‑current overview for developers, contributors, and anyone interested in the org’s work, without requiring manual edits.",
+  "when": "Use it when you need a quick, up‑to‑date snapshot of all public repositories in the organization. The site is live on GitHub Pages and refreshed daily via a GitHub Actions workflow that regenerates the JSON and updates AI summaries.",
   "stack": [
    "JavaScript",
    "HTML",
    "CSS",
    "GitHub Pages",
    "GitHub Actions",
-   "LLM (Groq/OpenRouter)"
+   "LLM"
   ],
   "highlights": [
-   "Pure static assets – no framework or build step",
-   "Daily GitHub Action regenerates repo list and AI summaries",
-   "Runtime fetch adds newly created repos via unauthenticated API",
-   "Works offline with cached snapshot if API call fails"
+   "Pure static site – no build step or bundler",
+   "AI‑generated repo summaries refreshed daily",
+   "New repositories appear automatically via GitHub API",
+   "LLM configuration via repository secrets or variables"
   ],
   "model": "openai/gpt-oss-120b",
-  "at": "2026-11-19T13:05:22.075Z"
+  "at": "2026-11-20T12:53:07.567Z"
  },
  "WebWeaveX": {
   "sig": "2026-08-17T09:39:41Z|Deterministic runtime cognition infrastructure for humans and AI agents — the same input yields the same SHA-256 across Python, JavaScript, Dart, Java and Kotlin.|openai/gpt-oss-120b",
